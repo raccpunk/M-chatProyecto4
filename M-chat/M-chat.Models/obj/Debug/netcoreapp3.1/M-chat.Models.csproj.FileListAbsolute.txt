@@ -1,0 +1,9 @@
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\obj\Debug\netcoreapp3.1\M-chat.Models.csprojAssemblyReference.cache
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\obj\Debug\netcoreapp3.1\M-chat.Models.csproj.CoreCompileInputs.cache
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\obj\Debug\netcoreapp3.1\M-chat.Models.AssemblyInfoInputs.cache
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\obj\Debug\netcoreapp3.1\M-chat.Models.AssemblyInfo.cs
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\bin\Debug\netcoreapp3.1\M-chat.Models.deps.json
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\bin\Debug\netcoreapp3.1\M-chat.Models.dll
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\bin\Debug\netcoreapp3.1\M-chat.Models.pdb
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\obj\Debug\netcoreapp3.1\M-chat.Models.dll
+C:\Users\CASA\source\repos\M-chat\M-chat.Models\obj\Debug\netcoreapp3.1\M-chat.Models.pdb

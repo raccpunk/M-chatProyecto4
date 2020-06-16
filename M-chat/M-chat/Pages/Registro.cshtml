@@ -38,7 +38,7 @@
         }
 
             .signup-form h2 {
-                color: #333;
+                color: #000000;
                 margin: 0 0 30px 0;
                 display: inline-block;
                 padding: 0 30px 10px 0;
@@ -77,7 +77,7 @@
             }
 
                 .signup-form .btn:hover, .signup-form .btn:focus {
-                    background: #41cba9;
+                    background: #;
                     outline: none !important;
                 }
 
@@ -118,28 +118,14 @@
                     <input type="text" class="form-control" name="Apellidos" required="required">
                 </div>
             </div>
+
             <label for="start">Fecha de Nacimiento:</label>
 
             <input type="date" id="start" name="trip-start"
                    value="2018-07-22"
                    min="2020-01-01" max="2025-12-31">
             <html>
-            <head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-                <title>Untitled</title>
-                <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-                <link rel="stylesheet" href="assets/css/styles.css">
-            </head>
 
-            <body>
-                <div class="btn-group">
-                    <button class="btn btn-primary" type="button">Sexo</button><button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false" type="button"></button>
-                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Hombre</a><a class="dropdown-item" role="presentation" href="#">Mujer</a><a class="dropdown-item" role="presentation" href="#">Prefiero no responder</a></div>
-                </div>
-                <script src="assets/js/jquery.min.js"></script>
-                <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-            </body>
 
         </html>
         <div class="form-group">
@@ -154,34 +140,41 @@
                 <input type="text" class="form-control" name="Nacionalidad" required="required">
             </div>
         </div>
-
         <div class="form-group">
-            <label class="control-label col-xs-4">E-mail </label>
-            <div class="col-xs-8">
-                <input type="email" class="form-control" name="email" required="required">
+            <select name="Sexo">
+                <option selected value="0"> Seleccion su sexo </option>
+                <option value="1">Hombre</option>
+                <option value="2">Mujer</option>
+               
+                    
+            </select>
+            <div class="form-group">
+                <label class="control-label col-xs-4">E-mail </label>
+                <div class="col-xs-8">
+                    <input type="email" class="form-control" name="email" required="required">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-xs-4">Contraseña</label>
-            <div class="col-xs-8">
-                <input type="password" class="form-control" name="Contraseña" required="required">
+            <div class="form-group">
+                <label class="control-label col-xs-4">Contraseña</label>
+                <div class="col-xs-8">
+                    <input type="password" class="form-control" name="Contraseña" required="required">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-xs-4">Confirmar Contraseña</label>
-            <div class="col-xs-8">
-                <input type="password" class="form-control" name="confirmarContraseña" required="required">
+            <div class="form-group">
+                <label class="control-label col-xs-4">Confirmar Contraseña</label>
+                <div class="col-xs-8">
+                    <input type="password" class="form-control" name="confirmarContraseña" required="required">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-xs-8 col-xs-offset-4">
-                <p><label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>.</label></p>
-                <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+            <div class="form-group">
+                <div class="col-xs-8 col-xs-offset-4">
+                    <p><label class="checkbox-inline"><input type="checkbox" required="required"> Acepto los terminos y condiciones<a href="#"></a> &amp; <a href="~/img/Politicas de la pagina web.pdf">Politica de privacidad</a>.</label></p>
+                    <button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
+                </div>
             </div>
-        </div>
 
         </form>
-    <div class="text-center">Already have an account? <a href="#">Login here</a></div>
+ 
 </div>
 </body>
 </html>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat\\M-chat.csproj": {}
+    "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat\\M-chat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
+    "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj",
+        "projectUniqueName": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj",
         "projectName": "M-chat.Models",
-        "projectPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj",
+        "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj",
         "packagesPath": "C:\\Users\\CASA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\obj\\",
+        "outputPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,6 +41,22 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.DataAnnotations": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Services\\M-chat.Services.csproj": {
+    "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\M-chat.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Services\\M-chat.Services.csproj",
+        "projectUniqueName": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\M-chat.Services.csproj",
         "projectName": "M-chat.Services",
-        "projectPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Services\\M-chat.Services.csproj",
+        "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\M-chat.Services.csproj",
         "packagesPath": "C:\\Users\\CASA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Services\\obj\\",
+        "outputPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -87,71 +103,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
-                "projectPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat\\M-chat.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat\\M-chat.csproj",
-        "projectName": "M-chat",
-        "projectPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat\\M-chat.csproj",
-        "packagesPath": "C:\\Users\\CASA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\CASA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {
-              "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
-                "projectPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj"
-              },
-              "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Services\\M-chat.Services.csproj": {
-                "projectPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Services\\M-chat.Services.csproj"
+              "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
+                "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj"
               }
             }
           }
@@ -165,6 +118,125 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat\\M-chat.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat\\M-chat.csproj",
+        "projectName": "M-chat",
+        "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat\\M-chat.csproj",
+        "packagesPath": "C:\\Users\\CASA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\CASA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
+                "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj"
+              },
+              "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\M-chat.Services.csproj": {
+                "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\M-chat.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "BouncyCastle": {
+              "target": "Package",
+              "version": "[1.8.6.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"

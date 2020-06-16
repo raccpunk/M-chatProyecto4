@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {}
+    "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
+    "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj",
+        "projectUniqueName": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj",
         "projectName": "M-chat.Models",
-        "projectPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\M-chat.Models.csproj",
+        "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj",
         "packagesPath": "C:\\Users\\CASA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CASA\\Documents\\GitHub\\MchatProyecto\\MchatProyecto\\M-chat\\M-chat.Models\\obj\\",
+        "outputPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,6 +41,22 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.DataAnnotations": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

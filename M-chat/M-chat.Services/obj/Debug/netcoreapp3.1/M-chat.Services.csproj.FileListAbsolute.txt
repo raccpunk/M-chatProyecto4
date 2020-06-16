@@ -1,0 +1,15 @@
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\bin\Debug\netcoreapp3.1\M-chat.Services.deps.json
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\bin\Debug\netcoreapp3.1\M-chat.Services.dll
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\bin\Debug\netcoreapp3.1\M-chat.Services.pdb
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\bin\Debug\netcoreapp3.1\M-chat.Models.dll
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\bin\Debug\netcoreapp3.1\M-chat.Models.pdb
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\obj\Debug\netcoreapp3.1\M-chat.Services.csprojAssemblyReference.cache
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\obj\Debug\netcoreapp3.1\M-chat.Services.AssemblyInfoInputs.cache
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\obj\Debug\netcoreapp3.1\M-chat.Services.AssemblyInfo.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\obj\Debug\netcoreapp3.1\M-chat.Services.csproj.CopyComplete
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\obj\Debug\netcoreapp3.1\M-chat.Services.dll
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\obj\Debug\netcoreapp3.1\M-chat.Services.pdb
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\bin\Debug\netcoreapp3.1\M-chat.Services.runtimeconfig.json
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\bin\Debug\netcoreapp3.1\M-chat.Services.runtimeconfig.dev.json
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\obj\Debug\netcoreapp3.1\M-chat.Services.csproj.CoreCompileInputs.cache
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat.Services\obj\Debug\netcoreapp3.1\M-chat.Services.genruntimeconfig.cache

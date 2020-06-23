@@ -41,7 +41,7 @@ namespace M_chat.Pages
             }
             else
             {
-                HttpContext.Session.SetString("email", tutor.Email);
+                HttpContext.Session.SetString("Nombre", _tutor.Nombre);
                 return RedirectToPage("InicioUsuario");
             }
         }
@@ -60,7 +60,7 @@ namespace M_chat.Pages
         public IActionResult OnGetLogout()
         {
 
-            HttpContext.Session.Remove("email");
+            HttpContext.Session.Remove("Nombre");
             return RedirectToPage("Index");
         }
     }

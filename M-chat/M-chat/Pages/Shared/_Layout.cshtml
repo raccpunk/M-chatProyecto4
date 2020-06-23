@@ -18,12 +18,40 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Index">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Registro">Registrarse</a>
-                        </li>         
+
+
+                        @if (ViewData["Title"].ToString() != "Inicio")
+                        {
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-page="/InicioUsuario">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-page="/Cuestionario">Cuestionario</a>
+                            </li>
+                          
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-page="/Index">Inicio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-page="/Cuestionario">Cuestionario</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-page="/Registrarninio">Registro Niño</a>
+                            </li>
+                         
+                         
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-page="/RegistrEscuela">Registro Escuela</a>
+                            </li>
+
+                        }
+
+                        }
 
 </div>
             </div>

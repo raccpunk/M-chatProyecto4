@@ -12,7 +12,7 @@ namespace M_chat.Pages
     {
         public IActionResult OnGet()
         {
-            if (HttpContext.Session.GetString("email") == null)
+            if (HttpContext.Session.GetString("Nombre") == null)
             {
                 return RedirectToPage("Index");
             }

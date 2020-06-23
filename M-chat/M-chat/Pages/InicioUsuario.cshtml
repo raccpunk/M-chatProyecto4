@@ -5,7 +5,7 @@
     ViewData["Title"] = "InicioUsuario";
 }
 
-<h1>Bienvenido @HttpContext.Session.GetString("Email")</h1>
+<h1>Bienvenida(o) @HttpContext.Session.GetString("Nombre")</h1>
 <div class="text-right">
     <a asp-page-handler="logout" asp-page="Index" class="trigger-btn">Cerrar Seción</a>
 
@@ -58,23 +58,23 @@
                     margin-top: 7px;
                 }
 
-            .search-box {
+            .Buscar-box {
                 position: relative;
                 float: right;
             }
 
-                .search-box .input-group {
+                .Buscar-box .input-group {
                     min-width: 200px;
                     position: absolute;
                     right: 0;
                 }
 
-                .search-box .input-group-addon, .search-box input {
+                .Buscar-box .input-group-addon, .Buscar-box input {
                     border-color: #ddd;
                     border-radius: 0;
                 }
 
-                .search-box .input-group-addon {
+                .Buscar-box .input-group-addon {
                     border: none;
                     border: none;
                     background: transparent;
@@ -82,18 +82,18 @@
                     z-index: 9;
                 }
 
-                .search-box input {
+                .Buscar-box input {
                     height: 34px;
                     padding-left: 28px;
                     box-shadow: none !important;
                     border-width: 0 0 1px 0;
                 }
 
-                    .search-box input:focus {
+                    .Buscar-box input:focus {
                         border-color: #3FBAE4;
                     }
 
-                .search-box i {
+                .Buscar-box i {
                     color: #a0a5b1;
                     font-size: 19px;
                     position: relative;
@@ -186,10 +186,10 @@
             $(document).ready(function () {
                 $('[data-toggle="tooltip"]').tooltip();
                 // Animate select box length
-                var searchInput = $(".search-box input");
-                var inputGroup = $(".search-box .input-group");
+                var BuscarInput = $(".Buscar-box input");
+                var inputGroup = $(".Buscar-box .input-group");
                 var boxWidth = inputGroup.width();
-                searchInput.focus(function () {
+                BuscarInput.focus(function () {
                     inputGroup.animate({
                         width: "300"
                     });

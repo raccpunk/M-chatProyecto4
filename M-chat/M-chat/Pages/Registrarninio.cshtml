@@ -1,0 +1,166 @@
+﻿@page
+@model M_chat.Pages.RegistrarninioModel
+@{
+    ViewData["Title"] = "Registrarninio";
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Sign up Form Horizontal</title>
+    <style type="text/css">
+        body {
+            color: #999;
+            background: #f3f3f3;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .form-control {
+            border-color: #eee;
+            min-height: 41px;
+            box-shadow: none !important;
+        }
+
+            .form-control:focus {
+                border-color: #5cd3b4;
+            }
+
+        .form-control, .btn {
+            border-radius: 3px;
+        }
+
+        .signup-form {
+            width: 500px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+            .signup-form h2 {
+                color: #000000;
+                margin: 0 0 30px 0;
+                display: inline-block;
+                padding: 0 30px 10px 0;
+                border-bottom: 3px solid #5cd3b4;
+            }
+
+            .signup-form form {
+                color: #999;
+                border-radius: 3px;
+                margin-bottom: 15px;
+                background: #fff;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+                padding: 30px;
+            }
+
+            .signup-form .form-group {
+                margin-bottom: 20px;
+            }
+
+            .signup-form label {
+                font-weight: normal;
+                font-size: 13px;
+            }
+
+            .signup-form input[type="checkbox"] {
+                margin-top: 2px;
+            }
+
+            .signup-form .btn {
+                font-size: 16px;
+                font-weight: bold;
+                background: #5cd3b4;
+                border: none;
+                margin-top: 20px;
+                min-width: 140px;
+            }
+
+                .signup-form .btn:hover, .signup-form .btn:focus {
+                    background: #;
+                    outline: none !important;
+                }
+
+            .signup-form a {
+                color: #5cd3b4;
+                text-decoration: underline;
+            }
+
+                .signup-form a:hover {
+                    text-decoration: none;
+                }
+
+            .signup-form form a {
+                color: #5cd3b4;
+                text-decoration: none;
+            }
+
+                .signup-form form a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="signup-form">
+        <form action="/examples/actions/confirmation.php" method="post" class="form-horizontal">
+            <div class="col-xs-8 col-xs-offset-4">
+                <h2>Registro</h2>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-4">Nombre</label>
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" name="NombreN" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-4">Apellidos</label>
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" name="ApellidosN" required="required">
+                </div>
+            </div>
+
+            <label for="start">Fecha de Nacimiento:</label>
+
+            <input type="date" id="start" name="trip-start"
+                   value="2018-07-22"
+                   min="2020-01-01" max="2025-12-31">
+            <html>
+
+
+        </html>
+        <div class="form-group">
+            <label class="control-label col-xs-4">CURP</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" name="CURPN" required="required">
+            </div>
+        </div>
+
+   
+        <div class="form-group">
+            <select name="Sexo">
+                <option selected value="0"> Seleccion su sexo </option>
+                <option value="1">Hombre</option>
+                <option value="2">Mujer</option>
+
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-4">Nacionalidad</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" name="NacionalidadN" required="required">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-8 col-xs-offset-4">
+                <p><label class="checkbox-inline"><input type="checkbox" required="required"> Acepto los terminos y condiciones<a href="#"></a> &amp; <a href="~/img/Politicas de la pagina web.pdf">Politica de privacidad</a>.</label></p>
+                <button type="submit" class="btn btn-primary btn-lg">Registrar Niño</button>
+            </div>
+        </div>
+
+        </form>
+
+</div>
+</body>
+</html>
+

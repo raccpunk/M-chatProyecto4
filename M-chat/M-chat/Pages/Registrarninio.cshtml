@@ -101,28 +101,40 @@
 </head>
 <body>
     <div class="signup-form">
-        <form action="/examples/actions/confirmation.php" method="post" class="form-horizontal">
+        <form method="post" class="form-horizontal">
             <div class="col-xs-8 col-xs-offset-4">
-                <h2>Registro</h2>
+                <h2>Registro Del Niño</h2>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-4">E-mail del Tutor</label>
+                <div class="col-xs-8">
+                    <input type="email" class="form-control" asp-for="@Model.ninio.Email" required="required">
+                </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-xs-4">Nombre</label>
                 <div class="col-xs-8">
-                    <input type="text" class="form-control" name="NombreN" required="required">
+                    <input type="text" class="form-control" asp-for="@Model.ninio.Nombre" required="required">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-xs-4">Apellidos</label>
                 <div class="col-xs-8">
-                    <input type="text" class="form-control" name="ApellidosN" required="required">
+                    <input type="text" class="form-control" asp-for="@Model.ninio.Apellidos" required="required">
                 </div>
             </div>
+            <div class="form-group">
+                <select asp-for="@Model.ninio.Clave" asp-items="@(new SelectList(Model.centroEducativos,"Clave","NombreCentroEducativo"))">
+                    <option selected disabled> Seleccion su Centro Educativo </option>
 
+                     
+                </select>
+            </div>
             <label for="start">Fecha de Nacimiento:</label>
 
-            <input type="date" id="start" name="trip-start"
-                   value="2018-07-22"
-                   min="2020-01-01" max="2025-12-31">
+            <input type="date" id="start" asp-for="@Model.ninio.FechaNacimientoNinio
+                   value=" 2018-07-22"
+                   min="1900-01-01" max="2025-12-31">
             <html>
 
 
@@ -130,27 +142,20 @@
         <div class="form-group">
             <label class="control-label col-xs-4">CURP</label>
             <div class="col-xs-8">
-                <input type="text" class="form-control" name="CURPN" required="required">
+                <input type="text" class="form-control" asp-for="@Model.ninio.CurpNinio" required="required">
             </div>
         </div>
 
-   
+
         <div class="form-group">
-            <select name="Sexo">
-                <option selected value="0"> Seleccion su sexo </option>
-                <option value="1">Hombre</option>
-                <option value="2">Mujer</option>
+            <select asp-for="@Model.ninio.GeneroNinio">
+                <option selected disabled> Seleccion su sexo </option>
+                <option value="Homnbre">Hombre</option>
+                <option value="Mujer">Mujer</option>
 
 
             </select>
         </div>
-        <div class="form-group">
-            <label class="control-label col-xs-4">Nacionalidad</label>
-            <div class="col-xs-8">
-                <input type="text" class="form-control" name="NacionalidadN" required="required">
-            </div>
-        </div>
-
         <div class="form-group">
             <div class="col-xs-8 col-xs-offset-4">
                 <p><label class="checkbox-inline"><input type="checkbox" required="required"> Acepto los terminos y condiciones<a href="#"></a> &amp; <a href="~/img/Politicas de la pagina web.pdf">Politica de privacidad</a>.</label></p>

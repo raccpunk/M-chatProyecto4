@@ -7,7 +7,7 @@ namespace M_chat.Models
     {
         public CentroEducativo()
         {
-            Niño = new HashSet<Niño>();
+            Ninio = new HashSet<Ninio>();
         }
 
         public string Clave { get; set; }
@@ -17,6 +17,6 @@ namespace M_chat.Models
         public string Direccion { get; set; }
         public string RepresentanteInstitucion { get; set; }
 
-        public virtual ICollection<Niño> Niño { get; set; }
+        public virtual ICollection<Ninio> Ninio { get; set; }
     }
 }

@@ -102,28 +102,28 @@
 </head>
 <body>
     <div class="signup-form">
-        <form action="/examples/actions/confirmation.php" method="post" class="form-horizontal">
+        <form  method="post" class="form-horizontal">
             <div class="col-xs-8 col-xs-offset-4">
                 <h2>Registro</h2>
             </div>
             <div class="form-group">
                 <label class="control-label col-xs-4">Nombre</label>
                 <div class="col-xs-8">
-                    <input type="text" class="form-control" name="Nombre" required="required">
+                    <input type="text" class="form-control" asp-for="@Model.tutor.Nombre" required="required">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-xs-4">Apellidos</label>
                 <div class="col-xs-8">
-                    <input type="text" class="form-control" name="Apellidos" required="required">
+                    <input type="text" class="form-control" asp-for="@Model.tutor.Apellidos" required="required">
                 </div>
             </div>
 
             <label for="start">Fecha de Nacimiento:</label>
 
-            <input type="date" id="start" name="trip-start"
+            <input type="date" id="start" asp-for="@Model.tutor.FechaNacimiento"
                    value="2018-07-22"
-                   min="2020-01-01" max="2025-12-31">
+                   min="1900-01-01" max="2025-12-31">
             <html>
 
 
@@ -131,41 +131,31 @@
         <div class="form-group">
             <label class="control-label col-xs-4">CURP</label>
             <div class="col-xs-8">
-                <input type="text" class="form-control" name="CURP" required="required">
+                <input type="text" class="form-control" asp-for="@Model.tutor.Curp" required="required">
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-xs-4">Nacionalidad</label>
-            <div class="col-xs-8">
-                <input type="text" class="form-control" name="Nacionalidad" required="required">
-            </div>
-        </div>
-        <div class="form-group">
-            <select name="Sexo">
-                <option selected value="0"> Seleccion su sexo </option>
-                <option value="1">Hombre</option>
-                <option value="2">Mujer</option>
+            <select asp-for="@Model.tutor.Genero">
+                <option selected disabled> Seleccion su sexo </option>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
                
                     
             </select>
+        </div>
             <div class="form-group">
                 <label class="control-label col-xs-4">E-mail </label>
                 <div class="col-xs-8">
-                    <input type="email" class="form-control" name="email" required="required">
+                    <input type="email" class="form-control" asp-for="@Model.tutor.Email" required="required">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-xs-4">Contraseña</label>
                 <div class="col-xs-8">
-                    <input type="password" class="form-control" name="Contraseña" required="required">
+                    <input type="password" class="form-control" asp-for="@Model.tutor.Contrasenia" required="required">
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-xs-4">Confirmar Contraseña</label>
-                <div class="col-xs-8">
-                    <input type="password" class="form-control" name="confirmarContraseña" required="required">
-                </div>
-            </div>
+ 
             <div class="form-group">
                 <div class="col-xs-8 col-xs-offset-4">
                     <p><label class="checkbox-inline"><input type="checkbox" required="required"> Acepto los terminos y condiciones<a href="#"></a> &amp; <a href="~/img/Politicas de la pagina web.pdf">Politica de privacidad</a>.</label></p>

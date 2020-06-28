@@ -31,10 +31,10 @@ namespace M_chat.Pages
         {
             tutor = new Tutor();
         }
- 
+
         public IActionResult OnPost()
         {
-            var _tutor = login(tutor.Email, tutor.Contraseña);
+            var _tutor = login(tutor.Email, tutor.Contrasenia);
             if (_tutor == null)
             {
                 return RedirectToPage("ErrorInicio");
@@ -50,10 +50,10 @@ namespace M_chat.Pages
             var tuTor = BD.Tutor.SingleOrDefault(a => a.Email.Equals(email));
             if (tuTor != null)
             {
-                if (BCrypt.Net.BCrypt.Verify(contraseña, tuTor.Contraseña))
+                if (BCrypt.Net.BCrypt.Verify(contraseña, tuTor.Contrasenia))
                 {
                     return tuTor;
-                }  
+                }
             }
             return null;
         }
@@ -65,7 +65,7 @@ namespace M_chat.Pages
         }
     }
 }
-    
-    
-    
+
+
+
 

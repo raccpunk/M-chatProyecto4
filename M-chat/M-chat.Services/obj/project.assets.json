@@ -7808,11 +7808,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CASA\\Downloads\\M-chatProyecto4-master\\M-chat\\M-chat.Services\\M-chat.Services.csproj",
+      "projectUniqueName": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\M-chat.Services.csproj",
       "projectName": "M-chat.Services",
-      "projectPath": "C:\\Users\\CASA\\Downloads\\M-chatProyecto4-master\\M-chat\\M-chat.Services\\M-chat.Services.csproj",
+      "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\M-chat.Services.csproj",
       "packagesPath": "C:\\Users\\CASA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CASA\\Downloads\\M-chatProyecto4-master\\M-chat\\M-chat.Services\\obj\\",
+      "outputPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -7832,8 +7832,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\CASA\\Downloads\\M-chatProyecto4-master\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
-              "projectPath": "C:\\Users\\CASA\\Downloads\\M-chatProyecto4-master\\M-chat\\M-chat.Models\\M-chat.Models.csproj"
+            "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj": {
+              "projectPath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat.Models\\M-chat.Models.csproj"
             }
           }
         }

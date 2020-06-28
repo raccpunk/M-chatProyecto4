@@ -19,7 +19,7 @@ namespace M_chat.Services
         public virtual DbSet<CentroEducativo> CentroEducativo { get; set; }
         public virtual DbSet<Cuestionario> Cuestionario { get; set; }
         public virtual DbSet<Diagnostico> Diagnostico { get; set; }
-        public virtual DbSet<Niño> Niño { get; set; }
+        public virtual DbSet<Ninio> Ninio { get; set; }
         public virtual DbSet<Preguntas> Preguntas { get; set; }
         public virtual DbSet<Respuestas> Respuestas { get; set; }
         public virtual DbSet<Tutor> Tutor { get; set; }
@@ -28,8 +28,8 @@ namespace M_chat.Services
         {
             if (!optionsBuilder.IsConfigured)
             {
-
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-A0815E2\\SQLEXPRESS01; Initial Catalog=Prueba2; User ID=rogercastillo; Password=pelana69; Connect Timeout=15");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-A0815E2\\SQLEXPRESS01; Initial Catalog=Mchat; User ID=rogercastillo; Password=pelana69; Connect Timeout=15");
             }
         }
 
@@ -41,7 +41,7 @@ namespace M_chat.Services
                     .HasName("PK2")
                     .IsClustered(false);
 
-                entity.ToTable("Centro educativo");
+                entity.ToTable("Centro_educativo");
 
                 entity.Property(e => e.Clave)
                     .HasMaxLength(20)
@@ -115,14 +115,14 @@ namespace M_chat.Services
                     .HasConstraintName("RefRespuestas15");
             });
 
-            modelBuilder.Entity<Niño>(entity =>
+            modelBuilder.Entity<Ninio>(entity =>
             {
-                entity.HasKey(e => e.CurpNiño)
+                entity.HasKey(e => e.CurpNinio)
                     .HasName("PK4")
                     .IsClustered(false);
 
-                entity.Property(e => e.CurpNiño)
-                    .HasColumnName("Curp_Niño")
+                entity.Property(e => e.CurpNinio)
+                    .HasColumnName("Curp_Ninio")
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
@@ -131,13 +131,18 @@ namespace M_chat.Services
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.FechaNacimientoNiño)
-                    .HasColumnName("Fecha_Nacimiento_Niño")
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FechaNacimientoNinio)
+                    .HasColumnName("Fecha_Nacimiento_Ninio")
                     .HasColumnType("date");
 
-                entity.Property(e => e.GeneroNiño)
+                entity.Property(e => e.GeneroNinio)
                     .IsRequired()
-                    .HasColumnName("Genero_Niño")
+                    .HasColumnName("Genero_Ninio")
                     .HasMaxLength(10)
                     .IsUnicode(false)
                     .IsFixedLength();
@@ -148,10 +153,16 @@ namespace M_chat.Services
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.ClaveNavigation)
-                    .WithMany(p => p.Niño)
+                    .WithMany(p => p.Ninio)
                     .HasForeignKey(d => d.Clave)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("RefCentro_educativo21");
+
+                entity.HasOne(d => d.EmailNavigation)
+                    .WithMany(p => p.Ninio)
+                    .HasForeignKey(d => d.Email)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("RefTutor24");
             });
 
             modelBuilder.Entity<Preguntas>(entity =>
@@ -227,19 +238,13 @@ namespace M_chat.Services
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Contraseña)
+                entity.Property(e => e.Contrasenia)
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Curp)
                     .IsRequired()
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.CurpNiño)
-                    .IsRequired()
-                    .HasColumnName("Curp_Niño")
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
@@ -256,12 +261,6 @@ namespace M_chat.Services
                     .IsRequired()
                     .HasMaxLength(20)
                     .IsUnicode(false);
-
-                entity.HasOne(d => d.CurpNiñoNavigation)
-                    .WithMany(p => p.Tutor)
-                    .HasForeignKey(d => d.CurpNiño)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("RefNiño22");
             });
 
             OnModelCreatingPartial(modelBuilder);

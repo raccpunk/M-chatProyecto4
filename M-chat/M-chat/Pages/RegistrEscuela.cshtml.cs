@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using M_chat.Models;
 using M_chat.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -25,10 +26,17 @@ namespace M_chat.Pages
             BD.CentroEducativo.Add(centroeducativo);
             BD.SaveChanges();
         }
-        public void OnGet()
-
+      
+        public IActionResult OnGet()
         {
-
+            if (HttpContext.Session.GetString("Nombre") == null)
+            {
+                return RedirectToPage("Index");
+            }
+            else
+            {
+                return Page();
+            }
         }
     }
 }

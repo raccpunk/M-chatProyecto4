@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using M_chat.Models;
 using M_chat.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -22,15 +23,26 @@ namespace M_chat.Pages
             _logger = logger;
         }
         public IEnumerable<CentroEducativo> centroEducativos { get; set; }
-        public async Task OnGet()
-        {
-            centroEducativos = await BD.CentroEducativo.ToListAsync();
-        }
+
+      
         public async Task OnPost()
         {
             centroEducativos= await BD.CentroEducativo.ToListAsync();
             BD.Ninio.Add(ninio);
             BD.SaveChanges();
         }
+        public async Task<IActionResult> OnGetAsync()
+        {
+            centroEducativos = await BD.CentroEducativo.ToListAsync();
+            if (HttpContext.Session.GetString("Nombre") == null)
+            {
+                return RedirectToPage("Index");
+            }
+            else
+            {
+                return Page();
+            }
+        }
+
     }
 }

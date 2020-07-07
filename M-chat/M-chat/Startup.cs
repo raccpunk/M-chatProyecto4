@@ -31,6 +31,7 @@ namespace M_chat
             {
                 option.UseSqlServer(Configuration.GetConnectionString("ConexionString"));
             });
+            services.AddScoped<AppBDContext>();
             services.AddRazorPages();
            
         }

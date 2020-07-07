@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace M_chat.Models
 {
     public partial class Respuestas
     {
-        public Respuestas()
-        {
-            Diagnostico = new HashSet<Diagnostico>();
-        }
-
+        [Key]
+        [Required]
+        [Display(Name = "ID")]
         public int IdRespuesta { get; set; }
+        [Required]
+        [Display(Name = "Respuesta")]
+        [MaxLength(2)]
         public string Respuesta { get; set; }
-        public string Email { get; set; }
-        public int IdPregunta { get; set; }
-
-        public virtual Tutor EmailNavigation { get; set; }
-        public virtual Preguntas IdPreguntaNavigation { get; set; }
-        public virtual ICollection<Diagnostico> Diagnostico { get; set; }
     }
 }

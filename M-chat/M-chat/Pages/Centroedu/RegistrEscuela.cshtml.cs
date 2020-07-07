@@ -13,13 +13,14 @@ namespace M_chat.Pages
 {
     public class RegistrEscuelaModel : PageModel
     {
-        AppBDContext BD = new AppBDContext();
+        AppBDContext BD;
         private readonly ILogger<RegistrEscuelaModel> _logger;
         [BindProperty]
         public CentroEducativo centroeducativo { get; set; }
-        public RegistrEscuelaModel(ILogger<RegistrEscuelaModel> logger)
+        public RegistrEscuelaModel(ILogger<RegistrEscuelaModel> logger, AppBDContext appBD )
         {
             _logger = logger;
+            BD = appBD;
         }
         public void OnPost()
         {

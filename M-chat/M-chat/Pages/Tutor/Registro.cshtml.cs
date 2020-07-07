@@ -12,13 +12,14 @@ namespace M_chat.Pages
 {
     public class PrivacyModel : PageModel
     {
-        AppBDContext BD = new AppBDContext();
+        AppBDContext BD;
         private readonly ILogger<PrivacyModel> _logger;
         [BindProperty]
-        public Tutor tutor { get; set; }
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public Models.Tutor tutor { get; set; }
+        public PrivacyModel(ILogger<PrivacyModel> logger,AppBDContext appBD)
         {
             _logger = logger;
+            BD = appBD;
         }
 
         public void OnGet()

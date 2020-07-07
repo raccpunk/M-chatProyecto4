@@ -7,9 +7,9 @@
 
 <h1>Bienvenida(o) @HttpContext.Session.GetString("Nombre")</h1>
 <div class="text-right">
-    <a asp-page-handler="logout" asp-page="Index" class="trigger-btn">Cerrar Seción</a>
-
-    <html lang="en">
+    <a asp-page-handler="logout" asp-page="Index" class="trigger-btn">Cerrar Sesión</a>
+   </div>
+    
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,6 +22,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style type="text/css">
+
             body {
                 color: #566787;
                 background: #f5f5f5;
@@ -182,24 +183,7 @@
                 font-size: 13px;
             }
         </style>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('[data-toggle="tooltip"]').tooltip();
-                // Animate select box length
-                var BuscarInput = $(".Buscar-box input");
-                var inputGroup = $(".Buscar-box .input-group");
-                var boxWidth = inputGroup.width();
-                BuscarInput.focus(function () {
-                    inputGroup.animate({
-                        width: "300"
-                    });
-                }).blur(function () {
-                    inputGroup.animate({
-                        width: boxWidth
-                    });
-                });
-            });
-        </script>
+
     </head>
     <body>
         <div class="container">
@@ -234,96 +218,63 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Nombre <i class="fa fa-sort"></i></th>
+                            <th>Nombre</th>
+                            <th>Apellidos <i class="fa fa-sort"></i></th>
                             <th>Escuela</th>
-                            <th>Fecha de Registro <i class="fa fa-sort"></i></th>
                             <th>CURP</th>
-                            <th>Nacionalidad <i class="fa fa-sort"></i></th>
-                            <th>Acciones</th>
+                            <th>Fecha de nacimineto<i class="fa fa-sort"></i></th>
+                            <th>Genero</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Thomas Hardy</td>
-                            <td>La Primavera</td>
-                            <td>06-06-2020</td>
-                            <td>97219</td>
-                            <td>México</td>
-                            <td>
-                                <a href="#" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                <a href="#" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a href="#" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Maria Anders</td>
-                            <td>Rayitos de sol</td>
-                            <td>06-06-2020</td>
-                            <td>12209</td>
-                            <td>México</td>
-                            <td>
-                                <a href="#" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                <a href="#" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a href="#" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Fran Wilson</td>
-                            <td>Miguel Hidalgo</td>
-                            <td>06-06-2020</td>
-                            <td>28023</td>
-                            <td>México</td>
-                            <td>
-                                <a href="#" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                <a href="#" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a href="#" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Dominique Perrier</td>
-                            <td>Benito Juarez</td>
-                            <td>06-06-2020</td>
-                            <td>75016</td>
-                            <td>México</td>
-                            <td>
-                                <a href="#" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                <a href="#" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a href="#" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Martin Blank</td>
-                            <td>Via Monte Bianco 34</td>
-                            <td>06-06-2020</td>
-                            <td>10100</td>
-                            <td>México</td>
-                            <td>
-                                <a href="#" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                <a href="#" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a href="#" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
+                        @if (Model.ninios != null)
+                        {
+                            @foreach (var item in Model.ninios)
+                            {
+
+
+
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.ClaveEscuela)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Curp)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Genero)</td>
+                                    <td>
+                                        <a asp-page="./Edit" asp-route-curp="@item.Curp" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a asp-page="../Cuestionario" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a asp-page="./Delete" asp-route-curp="@item.Curp" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                            }
+
+                        }
+                        else
+                        {
+                            <tr>Sin Registros</tr>
+                        }
+
                     </tbody>
                 </table>
-                <div class="clearfix">
-                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                    <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Previous</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </body>
-</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        // Animate select box length
+        var BuscarInput = $(".Buscar-box input");
+        var inputGroup = $(".Buscar-box .input-group");
+        var boxWidth = inputGroup.width();
+        BuscarInput.focus(function () {
+            inputGroup.animate({
+                width: "300"
+            });
+        }).blur(function () {
+            inputGroup.animate({
+                width: boxWidth
+            });
+        });
+    });
+</script>

@@ -14,13 +14,14 @@ namespace M_chat.Pages
 {
     public class RegistrarninioModel : PageModel
     {
-        AppBDContext BD = new AppBDContext();
+        AppBDContext BD;
         private readonly ILogger<PrivacyModel> _logger;
         [BindProperty]
-        public Ninio ninio { get; set; }
-        public RegistrarninioModel(ILogger<PrivacyModel> logger)
+        public Models.Ninio ninio { get; set; }
+        public RegistrarninioModel(ILogger<PrivacyModel> logger, AppBDContext appBD)
         {
             _logger = logger;
+            BD = appBD;
         }
         public IEnumerable<CentroEducativo> centroEducativos { get; set; }
 

@@ -18,18 +18,20 @@ namespace M_chat.Pages
     {
         public string Msg;
         private readonly ILogger<IndexModel> _logger;
-        AppBDContext BD = new AppBDContext();
+        AppBDContext BD;
         [BindProperty]
-        public Tutor tutor { get; set; }
-        public IndexModel(ILogger<IndexModel> logger)
+        public Models.Tutor tutor { get; set; }
+        public string email { get; set; }
+        public IndexModel(ILogger<IndexModel> logger,AppBDContext appBD)
         {
             _logger = logger;
+            BD = appBD;
         }
 
 
         public void OnGet()
         {
-            tutor = new Tutor();
+            tutor = new Models.Tutor();
         }
 
         public IActionResult OnPost()
@@ -41,17 +43,19 @@ namespace M_chat.Pages
             }
             else
             {
+                //email= _tutor.Email;
                 HttpContext.Session.SetString("Nombre", _tutor.Nombre);
                 return RedirectToPage("InicioUsuario");
             }
         }
-        private Tutor login(string email, string contraseña)
+        private Models.Tutor login(string email, string contraseña)
         {
             var tuTor = BD.Tutor.SingleOrDefault(a => a.Email.Equals(email));
             if (tuTor != null)
             {
                 if (BCrypt.Net.BCrypt.Verify(contraseña, tuTor.Contrasenia))
                 {
+                    
                     return tuTor;
                 }
             }

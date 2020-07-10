@@ -20,12 +20,8 @@
                     <ul class="navbar-nav flex-grow-1">
 
 
-                        @if (ViewData["Title"].ToString() != "Inicio")
+                        @if (ViewData["Title"].ToString() != "Inicio" && ViewData["Title"].ToString() != "ErrorInicio" && ViewData["Title"].ToString() != "Registro")
                         {
-
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/InicioUsuario">Inicio</a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" asp-area="" asp-page="/Cuestionario">Cuestionario</a>
                             </li>

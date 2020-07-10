@@ -242,8 +242,8 @@
                                     <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Genero)</td>
                                     <td>
-                                        <a asp-page="./Edit" asp-route-curp="@item.Curp" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                        <a asp-page="../Cuestionario" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a asp-page="./Ninio/Edit" asp-route-curp="@item.Curp" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a asp-page="./Cuestionario" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                         <a asp-page="./Delete" asp-route-curp="@item.Curp" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                     </td>
                                 </tr>
@@ -252,7 +252,7 @@
                         }
                         else
                         {
-                            <tr>Sin Registros</tr>
+                            <tr class="text-black-50">Sin Registros</tr>
                         }
 
                     </tbody>

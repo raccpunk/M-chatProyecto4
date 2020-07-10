@@ -1,0 +1,60 @@
+﻿@page
+@model M_chat.Pages.Ninio.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Ninio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Ninio.Curp" />
+            <div class="form-group">
+                <label asp-for="Ninio.Email" class="control-label"></label>
+                <input asp-for="Ninio.Email" class="form-control" />
+                <span asp-validation-for="Ninio.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ninio.FechaNacimiento" class="control-label"></label>
+                <input asp-for="Ninio.FechaNacimiento" class="form-control" />
+                <span asp-validation-for="Ninio.FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ninio.Genero" class="control-label"></label>
+                <input asp-for="Ninio.Genero" class="form-control" />
+                <span asp-validation-for="Ninio.Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ninio.Nombre" class="control-label"></label>
+                <input asp-for="Ninio.Nombre" class="form-control" />
+                <span asp-validation-for="Ninio.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ninio.ClaveEscuela" class="control-label"></label>
+                <input asp-for="Ninio.ClaveEscuela" class="form-control" />
+                <span asp-validation-for="Ninio.ClaveEscuela" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ninio.Apellidos" class="control-label"></label>
+                <input asp-for="Ninio.Apellidos" class="form-control" />
+                <span asp-validation-for="Ninio.Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="../InicioUsuario" asp-route-email="@Model.Ninio.Email">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

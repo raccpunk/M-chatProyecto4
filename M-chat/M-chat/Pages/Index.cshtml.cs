@@ -43,9 +43,8 @@ namespace M_chat.Pages
             }
             else
             {
-                //email= _tutor.Email;
                 HttpContext.Session.SetString("Nombre", _tutor.Nombre);
-                return RedirectToPage("InicioUsuario");
+                return RedirectToPage("InicioUsuario", _tutor.Email);
             }
         }
         private Models.Tutor login(string email, string contraseña)

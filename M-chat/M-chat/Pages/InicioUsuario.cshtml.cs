@@ -37,6 +37,13 @@ namespace M_chat.Pages
             }
             else
             {
+                //esta variable recibe el email del tutor que es enviado por el post del inicio de sesion
+                //para esto le quita los 10 caractares que no son del correo
+                if (email==null)
+                {
+                    email = Request.QueryString.Value.Remove(0, 9);
+                }
+                
                 ninios = await (Bd.Ninio.Where(c => c.Email == email)).ToListAsync<Models.Ninio>();
                 return Page();
             }

@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="~/favicon.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - M_chat</title>
@@ -11,35 +12,13 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-white" >Detección del autismo</a>  
+                <img src="~/favicon.png" alt="Logo" width="75" /><a class="navbar-brand text-white">M-Chat</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-
-
-                        @if (ViewData["Title"].ToString() != "Inicio" && ViewData["Title"].ToString() != "ErrorInicio" && ViewData["Title"].ToString() != "Registro")
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/Cuestionario">Cuestionario</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/Ninio/RegistrarNinio">Registro Niño</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/Centroedu/RegistrEscuela">Registro Escuela</a>
-                            </li>
-
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/Index">Inicio</a>
-                            </li>
-
-                        }
                     </ul>
                 </div>
             </div>
@@ -53,7 +32,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - M_chat - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2020 Creado y diseñado por: Roger Castillo Chan
         </div>
     </footer>
 

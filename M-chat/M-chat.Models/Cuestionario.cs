@@ -26,6 +26,11 @@ namespace M_chat.Models
         public string Email { get; set; }
         [NotMapped]
         public Tutor tutor { get; set; }
+        [ForeignKey("Respuestas")]
+        [Required]
+        [Display(Name = "RespuestasId")]
+        public int RespuestasId { get; set; }
+        [NotMapped]
         public virtual ICollection<Respuestas> Respuestas { get; set; }
     }
 }

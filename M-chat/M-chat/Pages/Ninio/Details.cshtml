@@ -1,15 +1,14 @@
 ﻿@page
-@model M_chat.Pages.Ninio.DeleteModel
+@model M_chat.Pages.Ninio.DetailsModel
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Details";
 }
 
-<h1>Eliminar</h1>
+<h1>Detalles</h1>
 
-<h3>¿Estás seguro(a) de que quieres eliminar esto?</h3>
 <div>
-    <h4>Ninio</h4>
+    <h4>Niño</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -49,10 +48,8 @@
             @Html.DisplayFor(model => model.Ninio.Apellidos)
         </dd>
     </dl>
-    
-    <form method="post">
-        <input type="hidden" asp-for="Ninio.Curp" />
-        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-        <a asp-page="../InicioUsuario" class="btn btn-primary btn-lg active" asp-route-email="@Model.Ninio.Email">Volver al Inicio</a>
-    </form>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-curp="@Model.Ninio.Curp">Editar</a> |
+    <a asp-page="../InicioUsuario" asp-route-email="@Model.Ninio.Email">Volver al inicio</a>
 </div>

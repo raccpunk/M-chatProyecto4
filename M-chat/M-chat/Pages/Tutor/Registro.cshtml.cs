@@ -22,18 +22,12 @@ namespace M_chat.Pages
             BD = appBD;
         }
 
-        public void OnGet()
-
-        {
-
-        }
-
-        public void OnPost()
+        public IActionResult OnPost()
         {
             tutor.Contrasenia = BCrypt.Net.BCrypt.HashPassword(tutor.Contrasenia);
             BD.Tutor.Add(tutor);
             BD.SaveChanges();
-
+            return RedirectToPage("../Index");
         }
     }
 }

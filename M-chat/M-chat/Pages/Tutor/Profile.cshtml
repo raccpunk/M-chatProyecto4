@@ -1,0 +1,50 @@
+﻿@page
+@model M_chat.Pages.Tutor.ProfileModel
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h1>Perfil</h1>
+
+<div>
+    <h4>Tutor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tutor.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tutor.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tutor.Apellidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tutor.Apellidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tutor.FechaNacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tutor.FechaNacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tutor.Genero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tutor.Genero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tutor.Curp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tutor.Curp)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Tutor.Email">Editar</a> |
+    <a asp-route-email="@Model.Tutor.Email" asp-page="../InicioUsuario">Volver al inicio</a>
+</div>

@@ -377,7 +377,6 @@ C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreap
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
-C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\ErrorInicio.cshtml.g.cs
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Cuestionario.cshtml.g.cs
@@ -409,3 +408,6 @@ C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreap
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Ninio\Edit.cshtml.g.cs
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Ninio\Delete.cshtml.g.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Ninio\Details.cshtml.g.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Tutor\Profile.cshtml.g.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Tutor\Edit.cshtml.g.cs

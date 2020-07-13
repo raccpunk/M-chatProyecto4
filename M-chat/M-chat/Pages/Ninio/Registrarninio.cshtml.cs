@@ -18,6 +18,8 @@ namespace M_chat.Pages
         private readonly ILogger<PrivacyModel> _logger;
         [BindProperty]
         public Models.Ninio ninio { get; set; }
+        [BindProperty(SupportsGet =true)]
+        public string email { get; set; }
         public RegistrarninioModel(ILogger<PrivacyModel> logger, AppBDContext appBD)
         {
             _logger = logger;
@@ -32,11 +34,12 @@ namespace M_chat.Pages
             BD.Ninio.Add(ninio);
             BD.SaveChanges();
         }
-        public async Task<IActionResult> OnGetAsync()
+        public async Task<IActionResult> OnGetAsync(string email)
         {
             centroEducativos = await BD.CentroEducativo.ToListAsync();
             if (HttpContext.Session.GetString("Nombre") == null)
             {
+                this.email = email;
                 return RedirectToPage("Index");
             }
             else

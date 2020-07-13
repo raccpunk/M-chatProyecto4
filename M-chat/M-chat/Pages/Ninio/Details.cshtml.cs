@@ -10,16 +10,15 @@ using M_chat.Services;
 
 namespace M_chat.Pages.Ninio
 {
-    public class DeleteModel : PageModel
+    public class DetailsModel : PageModel
     {
-        private readonly M_chat.Services.AppBDContext _context;
+        private readonly AppBDContext _context;
 
-        public DeleteModel(M_chat.Services.AppBDContext context)
+        public DetailsModel(AppBDContext context)
         {
             _context = context;
         }
 
-        [BindProperty]
         public Models.Ninio Ninio { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string curp)
@@ -36,24 +35,6 @@ namespace M_chat.Pages.Ninio
                 return NotFound();
             }
             return Page();
-        }
-
-        public async Task<IActionResult> OnPostAsync(string curp)
-        {
-            if (curp == null)
-            {
-                return NotFound();
-            }
-
-            Ninio = await _context.Ninio.FindAsync(curp);
-
-            if (Ninio != null)
-            {
-                _context.Ninio.Remove(Ninio);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToPage("../InicioUsuario", Ninio.Email);
         }
     }
 }

@@ -17,6 +17,8 @@ namespace M_chat.Pages
         private readonly ILogger<RegistrEscuelaModel> _logger;
         [BindProperty]
         public CentroEducativo centroeducativo { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string email { get; set; }
         public RegistrEscuelaModel(ILogger<RegistrEscuelaModel> logger, AppBDContext appBD )
         {
             _logger = logger;
@@ -28,10 +30,11 @@ namespace M_chat.Pages
             BD.SaveChanges();
         }
       
-        public IActionResult OnGet()
+        public IActionResult OnGet(string email)
         {
             if (HttpContext.Session.GetString("Nombre") == null)
             {
+                this.email = email;
                 return RedirectToPage("Index");
             }
             else

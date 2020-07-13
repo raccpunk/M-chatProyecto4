@@ -20,9 +20,8 @@ namespace M_chat.Pages
         {
             Bd = _db;
         }
-
+        [BindProperty(SupportsGet =true)]
         public string email { get; set; }
-
         public IList<Models.Ninio> ninios { get; set; }
         //public async Task tutoremail() 
         //{
@@ -43,7 +42,7 @@ namespace M_chat.Pages
                 {
                     email = Request.QueryString.Value.Remove(0, 9);
                 }
-                
+                this.email = email;
                 ninios = await (Bd.Ninio.Where(c => c.Email == email)).ToListAsync<Models.Ninio>();
                 return Page();
             }

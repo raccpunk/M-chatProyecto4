@@ -6,275 +6,284 @@
 }
 
 <h1>Bienvenida(o) @HttpContext.Session.GetString("Nombre")</h1>
-<div class="text-right">
-    <a asp-page-handler="logout" asp-page="Index" class="trigger-btn">Cerrar Sesión</a>
-   </div>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap Elegant Table Design</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style type="text/css">
-
-            body {
-                color: #566787;
-                background: #f5f5f5;
-                font-family: 'Roboto', sans-serif;
-            }
-
-            .table-wrapper {
-                background: #fff;
-                padding: 20px;
-                margin: 30px 0;
-                box-shadow: 0 1px 1px rgba(0,0,0,.05);
-            }
-
-            .table-title {
-                font-size: 15px;
-                padding-bottom: 10px;
-                margin: 0 0 10px;
-                min-height: 45px;
-            }
-
-                .table-title h2 {
-                    margin: 5px 0 0;
-                    font-size: 24px;
-                }
-
-                .table-title select {
-                    border-color: #ddd;
-                    border-width: 0 0 1px 0;
-                    padding: 3px 10px 3px 5px;
-                    margin: 0 5px;
-                }
-
-                .table-title .show-entries {
-                    margin-top: 7px;
-                }
-
-            .Buscar-box {
-                position: relative;
-                float: right;
-            }
-
-                .Buscar-box .input-group {
-                    min-width: 200px;
-                    position: absolute;
-                    right: 0;
-                }
-
-                .Buscar-box .input-group-addon, .Buscar-box input {
-                    border-color: #ddd;
-                    border-radius: 0;
-                }
-
-                .Buscar-box .input-group-addon {
-                    border: none;
-                    border: none;
-                    background: transparent;
-                    position: absolute;
-                    z-index: 9;
-                }
-
-                .Buscar-box input {
-                    height: 34px;
-                    padding-left: 28px;
-                    box-shadow: none !important;
-                    border-width: 0 0 1px 0;
-                }
-
-                    .Buscar-box input:focus {
-                        border-color: #3FBAE4;
-                    }
-
-                .Buscar-box i {
-                    color: #a0a5b1;
-                    font-size: 19px;
-                    position: relative;
-                    top: 2px;
-                    left: -10px;
-                }
-
-            table.table tr th, table.table tr td {
-                border-color: #e9e9e9;
-            }
-
-            table.table th i {
-                font-size: 13px;
-                margin: 0 5px;
-                cursor: pointer;
-            }
-
-            table.table td:last-child {
-                width: 130px;
-            }
-
-            table.table td a {
-                color: #a0a5b1;
-                display: inline-block;
-                margin: 0 5px;
-            }
-
-                table.table td a.view {
-                    color: #03A9F4;
-                }
-
-                table.table td a.edit {
-                    color: #FFC107;
-                }
-
-                table.table td a.delete {
-                    color: #E34724;
-                }
-
-            table.table td i {
-                font-size: 19px;
-            }
-
-            .pagination {
-                float: right;
-                margin: 0 0 5px;
-            }
-
-                .pagination li a {
-                    border: none;
-                    font-size: 13px;
-                    min-width: 30px;
-                    min-height: 30px;
-                    padding: 0 10px;
-                    color: #999;
-                    margin: 0 2px;
-                    line-height: 30px;
-                    border-radius: 30px !important;
-                    text-align: center;
-                }
-
-                    .pagination li a:hover {
-                        color: #666;
-                    }
-
-                .pagination li.active a {
-                    background: #03A9F4;
-                }
-
-                    .pagination li.active a:hover {
-                        background: #0397d6;
-                    }
-
-                .pagination li.disabled i {
-                    color: #ccc;
-                }
-
-                .pagination li i {
-                    font-size: 16px;
-                    padding-top: 6px
-                }
-
-            .hint-text {
-                float: left;
-                margin-top: 10px;
-                font-size: 13px;
-            }
-        </style>
-
-    </head>
-    <body>
-        <div class="container">
-            <div class="table-wrapper">
-                <div class="table-title">
+<ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-user"></span>
+            <strong>Perfil</strong>
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <div class="navbar-login">
                     <div class="row">
-                        <div class="col-sm-4">
-                            <div class="show-entries">
-                                <span>Numero</span>
-                                <select>
-                                    <option>5</option>
-                                    <option>10</option>
-                                    <option>15</option>
-                                    <option>20</option>
-                                </select>
-                                <span>Personas</span>
-                            </div>
+                        <div class="col-lg-3">
+                            <p class="text-center">
+                                <span class="glyphicon glyphicon-user icon-size"></span>
+                            </p>
                         </div>
-                        <div class="col-sm-4">
-                            <h2 class="text-center"><b>Registros de niño(s)</b></h2>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="search-box">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-                                    <input type="text" class="form-control" placeholder="Search&hellip;">
-                                </div>
-                            </div>
+                        <div class="col-lg-4">
+                            <p class="text-left"><strong> @HttpContext.Session.GetString("Nombre")</strong></p>
+                            <p class="text-left small">@Model.email</p>
+                            <p class="text-left">
+                                <a asp-page="./Tutor/Profile" asp-route-id="@Model.email" class="btn btn-primary btn-block btn-sm">Mis datos</a>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellidos <i class="fa fa-sort"></i></th>
-                            <th>Escuela</th>
-                            <th>CURP</th>
-                            <th>Fecha de nacimineto<i class="fa fa-sort"></i></th>
-                            <th>Genero</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (Model.ninios != null)
-                        {
-                            @foreach (var item in Model.ninios)
-                            {
+            </li>
+            <li class="divider"></li>
+            <li>
+                <div class="navbar-login navbar-login-session">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>
+                                <a asp-page-handler="logout" asp-page="./Index" class="btn btn-primary btn-block btn-danger">Cerrar sesión</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style type="text/css">
+        .navbar-login {
+            width: 400px;
+            padding: 10px;
+            padding-bottom: 0px;
+        }
+
+        .navbar-login-session {
+            padding: 10px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+
+        .icon-size {
+            font-size: 60px;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 260px !important;
+            padding: 0.5rem 0;
+            margin: 0.125rem 0 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+        }
+        body {
+            color: #000000;
+            background: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .table-wrapper {
+            background: #fff;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        }
+
+        .table-title {
+            font-size: 15px;
+            padding-bottom: 10px;
+            margin: 0 0 10px;
+            min-height: 45px;
+        }
+
+            .table-title h2 {
+                margin: 5px 0 0;
+                font-size: 24px;
+            }
+
+            .table-title select {
+                border-color: #ddd;
+                border-width: 0 0 1px 0;
+                padding: 3px 10px 3px 5px;
+                margin: 0 5px;
+            }
+
+            .table-title .show-entries {
+                margin-top: 7px;
+            }
+
+       
+
+        table.table tr th, table.table tr td {
+            border-color: #e9e9e9;
+        }
+
+        table.table th i {
+            font-size: 13px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        table.table td:last-child {
+            width: 130px;
+        }
+
+        table.table td a {
+            color: #a0a5b1;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+            table.table td a.view {
+                color: #03A9F4;
+            }
+
+            table.table td a.edit {
+                color: #FFC107;
+            }
+
+            table.table td a.delete {
+                color: #E34724;
+            }
+
+        table.table td i {
+            font-size: 19px;
+        }
+
+        .pagination {
+            float: right;
+            margin: 0 0 5px;
+        }
+
+            .pagination li a {
+                border: none;
+                font-size: 13px;
+                min-width: 30px;
+                min-height: 30px;
+                padding: 0 10px;
+                color: #999;
+                margin: 0 2px;
+                line-height: 30px;
+                border-radius: 30px !important;
+                text-align: center;
+            }
+
+                .pagination li a:hover {
+                    color: #666;
+                }
+
+            .pagination li.active a {
+                background: #03A9F4;
+            }
+
+                .pagination li.active a:hover {
+                    background: #0397d6;
+                }
+
+            .pagination li.disabled i {
+                color: #ccc;
+            }
+
+            .pagination li i {
+                font-size: 16px;
+                padding-top: 6px
+            }
+
+        .hint-text {
+            float: left;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="show-entries">
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="text-center"><b>Registros de niño(s)</b></h2>
+                </div>
 
 
-
-                                <tr>
-                                    <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.ClaveEscuela)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.Curp)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.Genero)</td>
-                                    <td>
-                                        <a asp-page="./Ninio/Edit" asp-route-curp="@item.Curp" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                        <a asp-page="./Cuestionario" class="edit" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                        <a asp-page="./Delete" asp-route-curp="@item.Curp" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                            }
-
-                        }
-                        else
-                        {
-                            <tr class="text-black-50">Sin Registros</tr>
-                        }
-
-                    </tbody>
-                </table>
             </div>
         </div>
-    </body>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-        // Animate select box length
-        var BuscarInput = $(".Buscar-box input");
-        var inputGroup = $(".Buscar-box .input-group");
-        var boxWidth = inputGroup.width();
-        BuscarInput.focus(function () {
-            inputGroup.animate({
-                width: "300"
-            });
-        }).blur(function () {
-            inputGroup.animate({
-                width: boxWidth
-            });
-        });
-    });
-</script>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Escuela</th>
+                <th>CURP</th>
+                <th>Fecha de nacimineto</th>
+                <th>Genero</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.ninios != null)
+            {
+
+                @foreach (var item in Model.ninios)
+                {
+
+
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ClaveEscuela)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Curp)</td>
+                        <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Genero)</td>
+                        <td>
+                            <a asp-page="./Ninio/Edit" asp-route-curp="@item.Curp" class="edit" title="editar" data-toggle="tooltip"><i class="material-icons">&#xE869;</i></a>
+                            <a asp-page="./Ninio/Details" asp-route-curp="@item.Curp" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a asp-page="./Cuestionario" asp-route-curp="@item.Curp" asp-route-email="@item.Email" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE85D;</i></a>
+                            <a asp-page="./Ninio/Delete" asp-route-curp="@item.Curp" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr class="text-black-50">
+                    <td>Sin Registros</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div class="align-content-end float-right">
+        <a class="btn btn-primary btn-lg active btn-dark" role="button" aria-pressed="true" asp-route-email="@Model.email" asp-page="./Ninio/Registrarninio">Registrar Niño</a>
+    </div>
+    <div class="align-content-end float-right">
+        <a class="btn btn-primary btn-lg active btn-dark" role="button" aria-pressed="true" asp-route-email="@Model.email" asp-page="./CentroEdu/RegistrEscuela">
+            Registrar Escuela
+        </a>
+    </div>
+</body>
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@

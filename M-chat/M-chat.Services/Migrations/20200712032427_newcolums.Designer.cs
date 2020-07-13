@@ -4,14 +4,16 @@ using M_chat.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace M_chat.Services.Migrations
 {
     [DbContext(typeof(AppBDContext))]
-    partial class AppBDContextModelSnapshot : ModelSnapshot
+    [Migration("20200712032427_newcolums")]
+    partial class newcolums
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -251,6 +253,9 @@ namespace M_chat.Services.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(2)")
                         .HasMaxLength(2);
+
+                    b.Property<string>("ninio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdRespuesta");
 

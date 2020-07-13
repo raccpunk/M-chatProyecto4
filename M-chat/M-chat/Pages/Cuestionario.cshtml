@@ -37,396 +37,374 @@
             </ul>
         </div>
     </div>
+    <form method="post">
+        <div class="tab-content">
+            <div class="tab-pane fade" id="step1">
+                <div class="well">
 
-    <div class="tab-content">
-        <div class="tab-pane fade" id="step1">
+                    <p>
+                    <p>
+                        1. ¿Disfruta su hijo cuando se le balancea o se le hace saltar sobre sus rodillas?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta1" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta1" value="No"> NO
+                    </p>
+                    <p>
+                        <br>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="step2">
+                <div class="well">
+                    <p>
+                    <p>
+                        2. ¿Muestra interés por otros niños o niñas?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta2" value="SI"> SI
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta2" value="No"> No
+                    </p>
+                    <p>
+                        <br>
 
+                </div>
+            </div>
+            <div class="tab-pane fade" id="step3">
+                <div class="well">
+                    <p>
+                    <p>
+                        3. ¿Le gusta subirse a las cosas, como sillones, escalones, juegos del parque?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta3" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta3" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-            <div class="well">
+            </div>
+            <div class="tab-pane fade" id="step4">
+                <div class="well">
+                    <p>
+                    <p>
+                        4. ¿Le gusta que el adulto juegue con él o ella al “cucú-tras” (taparse los ojos y
+                        luego descubrirlos; jugar a esconderse y aparecer de repente)?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta4" value="SI"> SI
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta4" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-                <p>
-                <p>
-                    1. ¿Disfruta su hijo cuando se le balancea o se le hace saltar sobre sus rodillas?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
+            </div>
+
+            <div class="tab-pane fade" id="step5">
+                <div class="well">
+                    <p>
+                    <p>
+
+                        5. ¿Hace juegos imaginativos, como si hablara por teléfono, como si estuviera
+                        dando de comer a una muñeca o si estuviera conduciendo un coche?
+
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta5" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta5" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
+
             </div>
 
 
-        </div>
-
-
-
-        <div class="tab-pane fade" id="step2">
-            <div class="well">
-                <p>
-                <p>
-                    2. ¿Muestra interés por otros niños o niñas?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
+            <div class="tab-pane fade" id="step6">
+                <div class="well">
+                    <p>
+                    <p>
+                        6. ¿Suele señalar con el dedo para pedir algo?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta6" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta6" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
             </div>
 
-        </div>
+            <div class="tab-pane fade" id="step7">
+                <div class="well">
+                    <p>
+                    <p>
+                        7. ¿Suele señalar con el dedo para indicar que algo le llama la atención?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta7" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta7" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        <div class="tab-pane fade" id="step3">
-            <div class="well">
-                <p>
-                <p>
-                    3. ¿Le gusta subirse a las cosas, como sillones, escalones, juegos del parque?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
 
-        </div>
+            <div class="tab-pane fade" id="step8">
+                <div class="well">
+                    <p>
+                    <p>
+                        8. ¿Puede jugar adecuadamente con piezas o juguetes pequeños (por ejemplo
+                        cochecitos, muñequitos o bloques de construcción), sin únicamente chuparlos,
+                        agitarlos o tirarlos?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta8" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta8" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-
-
-        <div class="tab-pane fade" id="step4">
-            <div class="well">
-                <p>
-                <p>
-                    4. ¿Le gusta que el adulto juegue con él o ella al “cucú-tras” (taparse los ojos y
-                    luego descubrirlos; jugar a esconderse y aparecer de repente)?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
 
-        </div>
+            <div class="tab-pane fade" id="step9">
+                <div class="well">
+                    <p>
+                    <p>
+                        9. ¿Suele traerle objetos para enseñárselos?
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta9" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta9" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        <div class="tab-pane fade" id="step5">
-            <div class="well">
-                <p>
-                <p>
-
-                    5. ¿Hace juegos imaginativos, como si hablara por teléfono, como si estuviera
-                    dando de comer a una muñeca o si estuviera conduciendo un coche?
-
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
 
-        </div>
+            <div class="tab-pane fade" id="step10">
+                <div class="well">
+                    <p>
+                    <p>
+                        10. ¿Suele mirarle a los ojos durante unos segundos?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta10" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta10" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-
-        <div class="tab-pane fade" id="step6">
-            <div class="well">
-                <p>
-                <p>
-                    6. ¿Suele señalar con el dedo para pedir algo?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
 
-        </div>
+            <div class="tab-pane fade" id="step11">
+                <div class="well">
+                    <p>
+                    <p>
+                        11. ¿Le parece demasiado sensible a ruidos poco intensos? (por ejemplo,
+                        reacciona tapándose los oídos, o le genera alguna angustia)
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta11" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta11" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        <div class="tab-pane fade" id="step7">
-            <div class="well">
-                <p>
-                <p>
-                    7. ¿Suele señalar con el dedo para indicar que algo le llama la atención?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step12">
+                <div class="well">
+                    <p>
+                    <p>
+                        12. ¿Sonríe al verle a usted o cuando usted le sonríe?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta12" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta12" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-
-        <div class="tab-pane fade" id="step8">
-            <div class="well">
-                <p>
-                <p>
-                    8. ¿Puede jugar adecuadamente con piezas o juguetes pequeños (por ejemplo
-                    cochecitos, muñequitos o bloques de construcción), sin únicamente chuparlos,
-                    agitarlos o tirarlos?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step13">
+                <div class="well">
+                    <p>
+                    <p>
+                        13. ¿Puede imitar o repetir gestos o acciones que usted hace? (por ejemplo, si
+                        usted hace una mueca él o ella también la hace)
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta13" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta13" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-
-        <div class="tab-pane fade" id="step9">
-            <div class="well">
-                <p>
-                <p>
-                    9. ¿Suele traerle objetos para enseñárselos?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step14">
+                <div class="well">
+                    <p>
+                    <p>
+                        14. ¿Responde cuando se le llama por su nombre?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta14" value="SI"> SI
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta14" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-
-        <div class="tab-pane fade" id="step10">
-            <div class="well">
-                <p>
-                <p>
-                    10. ¿Suele mirarle a los ojos durante unos segundos?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step15">
+                <div class="well">
+                    <p>
+                    <p>
+                        15. Si usted señala con el dedo un juguete al otro lado de la habitación, ¿dirige
+                        su hijo o hija la mirada hacia ese juguete?
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta15" value="SI"> SI
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta15" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-
-        <div class="tab-pane fade" id="step11">
-            <div class="well">
-                <p>
-                <p>
-                    11. ¿Le parece demasiado sensible a ruidos poco intensos? (por ejemplo,
-                    reacciona tapándose los oídos, o le genera alguna angustia)
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step16">
+                <div class="well">
+                    <p>
+                    <p>
+                        16. ¿Ha aprendido ya a caminar?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta16" value="SI"> SI
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta16" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-        <div class="tab-pane fade" id="step12">
-            <div class="well">
-                <p>
-                <p>
-                    12. ¿Sonríe al verle a usted o cuando usted le sonríe?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step17">
+                <div class="well">
+                    <p>
+                    <p>
+                        17. Si usted está mirando algo atentamente, ¿su hijo o hija se pone también a
+                        mirarlo?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta17" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta17" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-        <div class="tab-pane fade" id="step13">
-            <div class="well">
-                <p>
-                <p>
-                    13. ¿Puede imitar o repetir gestos o acciones que usted hace? (por ejemplo, si
-                    usted hace una mueca él o ella también la hace)
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step18">
+                <div class="well">
+                    <p>
+                    <p>
+                        18. ¿Hace su hijo o hija movimientos raros con los dedos, por ejemplo,
+                        acercándoselos a los ojos?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta18" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta18" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-        <div class="tab-pane fade" id="step14">
-            <div class="well">
-                <p>
-                <p>
-                    14. ¿Responde cuando se le llama por su nombre?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step19">
+                <div class="well">
+                    <p>
+                    <p>
+                        19. ¿Intenta que usted preste atención a las actividades que él o ella está
+                        haciendo?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta19" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta19" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-        <div class="tab-pane fade" id="step15">
-            <div class="well">
-                <p>
-                <p>
-                    15. Si usted señala con el dedo un juguete al otro lado de la habitación, ¿dirige
-                    su hijo o hija la mirada hacia ese juguete?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step20">
+                <div class="well">
+                    <p>
+                    <p>
+                        20. ¿Alguna vez ha pensado que su hijo o hija podría tener sordera?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta20" value="SI"> SI
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta20" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-        <div class="tab-pane fade" id="step16">
-            <div class="well">
-                <p>
-                <p>
-                    16. ¿Ha aprendido ya a caminar?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step21">
+                <div class="well">
+                    <p>
+                    <p>
+                        21. ¿Entiende su hijo o hija lo que la gente dice?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta21" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta21" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-        <div class="tab-pane fade" id="step17">
-            <div class="well">
-                <p>
-                <p>
-                    17. Si usted está mirando algo atentamente, ¿su hijo o hija se pone también a
-                    mirarlo?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
+            <div class="tab-pane fade" id="step22">
+                <div class="well">
+                    <p>
+                    <p>
+                        22. ¿Se queda a veces mirando al vacío o va de un lado al otro sin propósito?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta22" value="SI"> SI
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta22" value="No"> No
+                    </p>
+                    <p>
+                        <br>
+                </div>
 
-        </div>
-        <div class="tab-pane fade" id="step18">
-            <div class="well">
-                <p>
-                <p>
-                    18. ¿Hace su hijo o hija movimientos raros con los dedos, por ejemplo,
-                    acercándoselos a los ojos?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
             </div>
-
-        </div>
-        <div class="tab-pane fade" id="step19">
-            <div class="well">
-                <p>
-                <p>
-                    19. ¿Intenta que usted preste atención a las actividades que él o ella está
-                    haciendo?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
+            <div class="tab-pane fade" id="step23">
+                <div class="well">
+                    <p>
+                    <p>
+                        23. Si su hijo o hija tiene que enfrentarse a una situación desconocida, ¿le mira
+                        primero a usted a la cara para saber cómo reaccionar?
+                    <p>
+                        <input type="radio" asp-for="@Model.Respuestas.Respuesta23" value="SI"> SI
+                    <p>
+                        <input type="radio"asp-for="@Model.Respuestas.Respuesta23" value="No" > No
+                    </p>
+                    <p>
+                        <br>
+                </div>
+                <input type="submit" class="btn btn-dark next btn-sm col-xs-2 margin-left" value="Finalizar Encuesta" />
             </div>
-
         </div>
-        <div class="tab-pane fade" id="step20">
-            <div class="well">
-                <p>
-                <p>
-                    20. ¿Alguna vez ha pensado que su hijo o hija podría tener sordera?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
-            </div>
-
-        </div>
-        <div class="tab-pane fade" id="step21">
-            <div class="well">
-                <p>
-                <p>
-                    21. ¿Entiende su hijo o hija lo que la gente dice?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
-            </div>
-
-        </div>
-        <div class="tab-pane fade" id="step22">
-            <div class="well">
-                <p>
-                <p>
-                    22. ¿Se queda a veces mirando al vacío o va de un lado al otro sin propósito?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
-            </div>
-
-        </div>
-
-
-
-   
-
-        <div class="tab-pane fade" id="step23">
-            <div class="well">
-                <p>
-                <p>
-                    23. Si su hijo o hija tiene que enfrentarse a una situación desconocida, ¿le mira
-                    primero a usted a la cara para saber cómo reaccionar?
-                <p>
-                    <input type="radio" name="hm" value="h"> SI
-                <p>
-                    <input type="radio" name="hm" value="m"> No
-                </p>
-                <p>
-                    <br>
-            </div>
-            <a class="btn btn-dark next btn-sm col-xs-2 margin-left" href="#">Finalizar Encuesta</a> 
-        </div>
-
-
-
- 
-
-
-
-
+    </form>
+</div>

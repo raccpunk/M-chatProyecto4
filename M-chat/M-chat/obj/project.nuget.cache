@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5rVnbk3Yje63Jt+Aosls9lvyXauXef/zrlsbqpEMMmt0RbD7fd3vC7ywswb34UMFcm0KF95shEdHWT53clRutw==",
+  "dgSpecHash": "zoyS3QacB8ZkOMhyadhYyBhmvuznDTtSLYa7ENf4hLvzKxEKSfY76cFozV3gJpZNDKjeFLZFrPBSbJdgq43+9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat\\M-chat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CASA\\.nuget\\packages\\bcrypt.net-next\\4.0.0\\bcrypt.net-next.4.0.0.nupkg.sha512",
-    "C:\\Users\\CASA\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
     "C:\\Users\\CASA\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\CASA\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\CASA\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
@@ -195,16 +194,5 @@
     "C:\\Users\\CASA\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\CASA\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"BouncyCastle 1.8.6.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "BouncyCastle",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  "logs": []
 }

@@ -1,16 +1,17 @@
 ﻿@page
-@model M_chat.Pages.ErrorInicioModel
+@model M_chat.Pages.RegistroExitosoEscModel
 @{
-    ViewData["Title"] = "ErrorInicio";
-
+    ViewData["Title"] = "RegistroExitosoEsc";
 }
 
+<h1></h1>
+<h1></h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Bootstrap Simple Error Confirmation Popup</title>
+    <title>Bootstrap Simple Success Confirmation Popup</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -24,8 +25,9 @@
         }
 
         .modal-confirm {
-            color: #000000;
+            color: #636363;
             width: 325px;
+            font-size: 14px;
         }
 
             .modal-confirm .modal-content {
@@ -74,16 +76,16 @@
                 height: 95px;
                 border-radius: 50%;
                 z-index: 9;
-                background: #ef513a;
+                background: #82ce34;
                 padding: 15px;
                 text-align: center;
                 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
             }
 
                 .modal-confirm .icon-box i {
-                    font-size: 56px;
+                    font-size: 58px;
                     position: relative;
-                    top: 4px;
+                    top: 3px;
                 }
 
             .modal-confirm.modal-dialog {
@@ -93,7 +95,7 @@
             .modal-confirm .btn {
                 color: #fff;
                 border-radius: 4px;
-                background: #ef513a;
+                background: #82ce34;
                 text-decoration: none;
                 transition: all 0.4s;
                 line-height: normal;
@@ -101,7 +103,7 @@
             }
 
                 .modal-confirm .btn:hover, .modal-confirm .btn:focus {
-                    background: #da2c12;
+                    background: #6fb32b;
                     outline: none;
                 }
 
@@ -113,26 +115,25 @@
 </head>
 <body>
 
-        <div class="modal-dialog modal-confirm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="icon-box">
-                        <i class="material-icons">&#xE5CD;</i>
-                    </div>
-                    <h4 class="modal-title">Opssssss!</h4>
+    <!-- Button HTML (to Trigger Modal) -->
+    <!-- Modal HTML -->
+
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE876;</i>
                 </div>
-                <div class="modal-body">
-                    <p class="text-center">Usuario o Contraseña Incorrectos Preciona Aceptar para volver al Inicio</p>
-                </div>
-                <div class="modal-footer">
-                    <a asp-page="Index" class="btn btn-danger btn-block" data-dismiss="modal">Aceptar</a>
-                </div>
+                <h4 class="modal-title w-100">Centro Educativo Registrado!</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">Tu Registro ha sido exitoso</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success btn-block" data-dismiss="modal">Continuar</button>
             </div>
         </div>
+    </div>
 
 </body>
 </html>
-
-
-
-

@@ -1,16 +1,16 @@
 ﻿@page
-@model M_chat.Pages.ErrorInicioModel
+@model M_chat.Pages.CuestionarioExitosoModel
 @{
-    ViewData["Title"] = "ErrorInicio";
-
+    ViewData["Title"] = "CuestionarioExitoso";
 }
 
+<h1></h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Bootstrap Simple Error Confirmation Popup</title>
+    <title>Bootstrap Elegant Success Modal</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -24,25 +24,31 @@
         }
 
         .modal-confirm {
-            color: #000000;
-            width: 325px;
+            color: #434e65;
+            width: 525px;
         }
 
             .modal-confirm .modal-content {
                 padding: 20px;
+                font-size: 16px;
                 border-radius: 5px;
                 border: none;
             }
 
             .modal-confirm .modal-header {
+                background: #47c9a2;
                 border-bottom: none;
                 position: relative;
+                text-align: center;
+                margin: -20px -20px 0;
+                border-radius: 5px 5px 0 0;
+                padding: 35px;
             }
 
             .modal-confirm h4 {
                 text-align: center;
-                font-size: 26px;
-                margin: 30px 0 -15px;
+                font-size: 36px;
+                margin: 10px 0;
             }
 
             .modal-confirm .form-control, .modal-confirm .btn {
@@ -52,57 +58,65 @@
 
             .modal-confirm .close {
                 position: absolute;
-                top: -5px;
-                right: -5px;
+                top: 15px;
+                right: 15px;
+                color: #fff;
+                text-shadow: none;
+                opacity: 0.5;
             }
 
-            .modal-confirm .modal-footer {
-                border: none;
-                text-align: center;
-                border-radius: 5px;
-                font-size: 13px;
-            }
+                .modal-confirm .close:hover {
+                    opacity: 0.8;
+                }
 
             .modal-confirm .icon-box {
                 color: #fff;
-                position: absolute;
-                margin: 0 auto;
-                left: 0;
-                right: 0;
-                top: -70px;
                 width: 95px;
                 height: 95px;
+                display: inline-block;
                 border-radius: 50%;
                 z-index: 9;
-                background: #ef513a;
+                border: 5px solid #fff;
                 padding: 15px;
                 text-align: center;
-                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
             }
 
                 .modal-confirm .icon-box i {
-                    font-size: 56px;
-                    position: relative;
-                    top: 4px;
+                    font-size: 64px;
+                    margin: -4px 0 0 -4px;
                 }
 
             .modal-confirm.modal-dialog {
                 margin-top: 80px;
             }
 
-            .modal-confirm .btn {
+            .modal-confirm .btn, .modal-confirm .btn:active {
                 color: #fff;
                 border-radius: 4px;
-                background: #ef513a;
+                background: #eeb711 !important;
                 text-decoration: none;
                 transition: all 0.4s;
                 line-height: normal;
+                border-radius: 30px;
+                margin-top: 10px;
+                padding: 6px 20px;
                 border: none;
             }
 
                 .modal-confirm .btn:hover, .modal-confirm .btn:focus {
-                    background: #da2c12;
+                    background: #eda645 !important;
                     outline: none;
+                }
+
+                .modal-confirm .btn span {
+                    margin: 1px 3px 0;
+                    float: left;
+                }
+
+                .modal-confirm .btn i {
+                    margin-left: 1px;
+                    font-size: 20px;
+                    float: right;
                 }
 
         .trigger-btn {
@@ -112,27 +126,27 @@
     </style>
 </head>
 <body>
+    <div class="text-center">
+        <!-- Button HTML (to Trigger Modal) -->
+ 
 
+    <!-- Modal HTML -->
+  
         <div class="modal-dialog modal-confirm">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header justify-content-center">
                     <div class="icon-box">
-                        <i class="material-icons">&#xE5CD;</i>
+                        <i class="material-icons">&#xE876;</i>
                     </div>
-                    <h4 class="modal-title">Opssssss!</h4>
+                    
                 </div>
-                <div class="modal-body">
-                    <p class="text-center">Usuario o Contraseña Incorrectos Preciona Aceptar para volver al Inicio</p>
-                </div>
-                <div class="modal-footer">
-                    <a asp-page="Index" class="btn btn-danger btn-block" data-dismiss="modal">Aceptar</a>
+                <div class="modal-body text-center">
+                    <h4>Cuestionario Finalizado !</h4>
+                    <p>El Resultado de este cuestionario será enviado a su correo o bien podrá descargarlo en la página principal</p>
+                    <button class="btn btn-success" data-dismiss="modal"><span>Continuar</span> <i class="material-icons">&#xE5C8;</i></button>
                 </div>
             </div>
         </div>
-
+    </div>
 </body>
 </html>
-
-
-
-

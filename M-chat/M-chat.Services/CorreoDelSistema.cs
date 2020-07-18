@@ -6,8 +6,8 @@ namespace M_chat.Services
     {
         public CorreoDelSistema()
         {
-            Remitente = "racc2018@gmail.com";
-            Password = "pelana69";
+            Remitente = "encuestaautismoutm@gmail.com";
+            Password = "Aa@19090484";
             Host = "smtp.gmail.com";
             Port = 587;
             Ssl = true;

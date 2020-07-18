@@ -9,5 +9,6 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>M_chat.Services.AppBDContext</WebStackScaffolding_DbContextTypeFullName>
+    <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
 </Project>

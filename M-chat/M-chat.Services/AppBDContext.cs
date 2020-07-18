@@ -20,7 +20,6 @@ namespace M_chat.Services
         public virtual DbSet<Cuestionario> Cuestionario { get; set; }
         public virtual DbSet<Diagnostico> Diagnostico { get; set; }
         public virtual DbSet<Ninio> Ninio { get; set; }
-        //public virtual DbSet<Preguntas> Preguntas { get; set; }
         public virtual DbSet<Respuestas> Respuestas { get; set; }
         public virtual DbSet<Tutor> Tutor { get; set; }
 

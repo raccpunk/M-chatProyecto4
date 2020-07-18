@@ -1,0 +1,49 @@
+﻿@page
+@model M_chat.Pages.Centroedu.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CentroEducativo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CentroEducativo.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CentroEducativo.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CentroEducativo.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CentroEducativo.Telefono)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CentroEducativo.NivelEducativo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CentroEducativo.NivelEducativo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CentroEducativo.Direccion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CentroEducativo.Direccion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CentroEducativo.Representante)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CentroEducativo.Representante)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.CentroEducativo.Clave"  asp-route-email="@Model.email">Edit</a> |
+    <a asp-page="../InicioUsuario" asp-route-email="@Model.email">Back to List</a>
+</div>

@@ -9,8 +9,7 @@ namespace M_chat.Models
     {
         [Key]
         [Required]
-        [Display(Name = "ID")]
-        public int IdRespuesta { get; set; }
+        public string Clave { get; set; }
         [Required]
         [Display(Name = "Respuesta1")]
         [MaxLength(2)]

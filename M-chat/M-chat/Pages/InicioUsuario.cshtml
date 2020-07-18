@@ -226,8 +226,6 @@
                 <div class="col-sm-4">
                     <h2 class="text-center"><b>Registros de niño(s)</b></h2>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -254,15 +252,32 @@
                     <tr>
                         <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
                         <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
-                        <td>@Html.DisplayFor(modelItem => item.ClaveEscuela)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ClaveEscuela)<a asp-page="./Centroedu/Details" asp-route-id="@item.ClaveEscuela" asp-route-email="@item.Email" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a></td>
                         <td>@Html.DisplayFor(modelItem => item.Curp)</td>
                         <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
                         <td>@Html.DisplayFor(modelItem => item.Genero)</td>
                         <td>
                             <a asp-page="./Ninio/Edit" asp-route-curp="@item.Curp" class="edit" title="editar" data-toggle="tooltip"><i class="material-icons">&#xE869;</i></a>
                             <a asp-page="./Ninio/Details" asp-route-curp="@item.Curp" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a asp-page="./Cuestionario" asp-route-curp="@item.Curp" asp-route-email="@item.Email" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE85D;</i></a>
                             <a asp-page="./Ninio/Delete" asp-route-curp="@item.Curp" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            @if (Model.Quest.Count()!=0)
+                            {
+                                @foreach (var cuestio in Model.Quest)
+                                {
+                                    @if (cuestio.Curpninio == item.Curp)
+                                    {
+                                        <i title="Encuesta contestada" class="material-icons">&#xE862;</i>
+                                        <i title="Descargar Resultado" class="material-icons">&#xE884;</i>
+                                    }
+
+                                }
+                            }
+                            else
+                            {
+                                <a asp-page="./Cuestionario" asp-route-curp="@item.Curp" asp-route-email="@item.Email" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE85D;</i></a>
+                            }
+
+
                         </td>
                     </tr>
                 }
@@ -285,5 +300,4 @@
         </a>
     </div>
 </body>
-@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+

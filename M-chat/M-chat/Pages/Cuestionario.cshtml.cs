@@ -21,6 +21,12 @@ namespace M_chat.Pages
         public string Email { get; set; }
         [BindProperty(SupportsGet = true)]
         public string Curp { get; set; }
+        public List<int> puntaje = new List<int>();
+        public int uno { get; set; }
+        public int dos { get; set; }
+        [BindProperty]
+        public Diagnostico diagnostico { get; set; }
+        public string Resultado { get; set; }
         public CuestionarioModel(AppBDContext _context)
         {
             context = _context;
@@ -38,21 +44,158 @@ namespace M_chat.Pages
                 Email = tutorem.Where(s => s.Curp.Contains(curp)).FirstOrDefault().Email;
                 return Page();
             }
+
         }
         public void OnPost()
         {
             var tutorem = from e in context.Ninio select e;
-            cuestionario.RespuestasId = Respuestas.IdRespuesta;
-            context.Respuestas.Add(Respuestas);
             cuestionario.Curpninio = Curp;
             cuestionario.Email = Email;
-            cuestionario.FechaAplicacion = DateTime.Now; ;
+            cuestionario.FechaAplicacion = DateTime.Now;
+            Respuestas.Clave = cuestionario.Email + cuestionario.Curpninio + DateTime.Now;
+            cuestionario.RespuestasId = Respuestas.Clave;
+            Diagnosticar();
+            diagnostico.Resultado = Resultado;
+            diagnostico.ninio = Curp;
+            correo(context.Ninio.Where(n => n.Curp == Curp).First().Nombre);
+            context.Diagnostico.Add(diagnostico);
+            context.Respuestas.Add(Respuestas);
             context.Cuestionario.Add(cuestionario);
             context.SaveChanges();
         }
-        private bool NinioExists(int id)
+        public void Diagnosticar() 
         {
-            return context.Respuestas.Any(e => e.IdRespuesta == id);
+            if (Respuestas.Respuesta1== "No") 
+            {
+                puntaje.Add(1); 
+            }
+            if (Respuestas.Respuesta2 == "No")
+            {
+                puntaje.Add(2);
+            }
+            if (Respuestas.Respuesta3 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta4 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta5 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta6 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta7 == "No")
+            {
+                puntaje.Add(2);
+            }
+            if (Respuestas.Respuesta8 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta9 == "No")
+            {
+                puntaje.Add(2);
+            }
+            if (Respuestas.Respuesta10 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta11 == "SI")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta12 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta13 == "No")
+            {
+                puntaje.Add(2);
+            }
+            if (Respuestas.Respuesta14 == "No")
+            {
+                puntaje.Add(2);
+            }
+            if (Respuestas.Respuesta15 == "No")
+            {
+                puntaje.Add(2); 
+            }
+            if (Respuestas.Respuesta16 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta17 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta18 == "SI")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta19 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta20 == "SI")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta21 == "No")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta22 == "SI")
+            {
+                puntaje.Add(1);
+            }
+            if (Respuestas.Respuesta23 == "No")
+            {
+                puntaje.Add(1);
+            }
+            for (int i = 0; i < puntaje.Count(); i++)
+            {
+                if (puntaje[i]==1)
+                {
+                    uno+=1;
+                }
+                if (puntaje[i] == 2)
+                {
+                    dos += 1;
+                }
+            }
+            if (uno>=3 | dos>=4)
+            {
+                Resultado = "Posible autismo";
+            }
+            else
+            {
+                Resultado = "Sin posibilidad de autismo";
+            }
+        }
+        public void correo(string nombre)
+        {
+            var ServicioDeCorreo = new CorreoDelSistema();
+            if (diagnostico.Resultado == "Posible autismo")
+            {
+                ServicioDeCorreo.EnviarCorreo(
+                        Asunto: "Deteccion del Autismo",
+                        Cuerpo: $"Su hijo {nombre} tiene propbabilidad de autismo",
+                        Destinatarios: new List<string> { Email }
+                        );
+            }
+            else
+            {
+                ServicioDeCorreo.EnviarCorreo(
+                    Asunto: "Deteccion del Autismo",
+                    Cuerpo: $"Su hijo {nombre} no tiene propbabilidad de autismo",
+                    Destinatarios: new List<string> { Email }
+                    );
+            }
         }
     }
 }

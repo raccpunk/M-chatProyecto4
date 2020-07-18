@@ -70,8 +70,9 @@ namespace M_chat.Services.Migrations
                     b.Property<string>("NinioCurp")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("RespuestasId")
-                        .HasColumnType("int");
+                    b.Property<string>("RespuestasId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdCuestionario");
 
@@ -91,6 +92,10 @@ namespace M_chat.Services.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Resultado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ninio")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -135,10 +140,8 @@ namespace M_chat.Services.Migrations
 
             modelBuilder.Entity("M_chat.Models.Respuestas", b =>
                 {
-                    b.Property<int>("IdRespuesta")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Clave")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Respuesta1")
                         .IsRequired()
@@ -252,7 +255,7 @@ namespace M_chat.Services.Migrations
                         .HasColumnType("nvarchar(2)")
                         .HasMaxLength(2);
 
-                    b.HasKey("IdRespuesta");
+                    b.HasKey("Clave");
 
                     b.ToTable("Respuestas");
                 });

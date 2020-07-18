@@ -29,8 +29,9 @@ namespace M_chat.Models
         [ForeignKey("Respuestas")]
         [Required]
         [Display(Name = "RespuestasId")]
-        public int RespuestasId { get; set; }
+        public string RespuestasId { get; set; } 
         [NotMapped]
         public virtual ICollection<Respuestas> Respuestas { get; set; }
+        
     }
 }

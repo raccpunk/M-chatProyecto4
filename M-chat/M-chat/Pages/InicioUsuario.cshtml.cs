@@ -23,10 +23,7 @@ namespace M_chat.Pages
         [BindProperty(SupportsGet =true)]
         public string email { get; set; }
         public IList<Models.Ninio> ninios { get; set; }
-        //public async Task tutoremail() 
-        //{
-        //    email = await (Bd.Tutor.Where(t => t.Nombre == HttpContext.Session.GetString("Nombre")).FirstOrDefaultAsync<Models.Tutor>());
-        //}
+        public IList<Cuestionario> Quest { get; set; }
         public async Task<IActionResult> OnGet(string email)
         {
             if (HttpContext.Session.GetString("Nombre") == null)
@@ -43,7 +40,10 @@ namespace M_chat.Pages
                     email = Request.QueryString.Value.Remove(0, 9);
                 }
                 this.email = email;
-                ninios = await (Bd.Ninio.Where(c => c.Email == email)).ToListAsync<Models.Ninio>();
+                ninios = await (Bd.Ninio.Where(c => c.Email == email)).ToListAsync();
+                Quest = await (Bd.Cuestionario.Where(n => n.Email == email)).ToListAsync();
+                
+                
                 return Page();
             }
         }

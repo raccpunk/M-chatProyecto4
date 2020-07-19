@@ -73,6 +73,7 @@
         .icon-size {
             font-size: 60px;
         }
+
         .dropdown-menu {
             position: absolute;
             top: 100%;
@@ -92,6 +93,7 @@
             border: 1px solid rgba(0, 0, 0, 0.15);
             border-radius: 0.25rem;
         }
+
         body {
             color: #000000;
             background: #fff;
@@ -128,7 +130,7 @@
                 margin-top: 7px;
             }
 
-       
+
 
         table.table tr th, table.table tr td {
             border-color: #e9e9e9;
@@ -260,16 +262,19 @@
                             <a asp-page="./Ninio/Edit" asp-route-curp="@item.Curp" class="edit" title="editar" data-toggle="tooltip"><i class="material-icons">&#xE869;</i></a>
                             <a asp-page="./Ninio/Details" asp-route-curp="@item.Curp" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                             <a asp-page="./Ninio/Delete" asp-route-curp="@item.Curp" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            @if (Model.Quest.Count()!=0)
+                            @if (Model.Quest != null)
                             {
                                 @foreach (var cuestio in Model.Quest)
                                 {
                                     @if (cuestio.Curpninio == item.Curp)
                                     {
                                         <i title="Encuesta contestada" class="material-icons">&#xE862;</i>
-                                        <i title="Descargar Resultado" class="material-icons">&#xE884;</i>
+                                        <button onclick="Oresultado"><i title="Descargar Resultado" class="material-icons">&#xE884;</i></button>
                                     }
-
+                                    else
+                                    {
+                                        <a asp-page="./Cuestionario" asp-route-curp="@item.Curp" asp-route-email="@item.Email" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE85D;</i></a>
+                                    }
                                 }
                             }
                             else

@@ -355,8 +355,6 @@ C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreap
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreapp3.1\M-chat.Models.pdb
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\bin\Debug\netcoreapp3.1\M-chat.Services.pdb
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.csprojAssemblyReference.cache
-C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.csproj.CoreCompileInputs.cache
-C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.RazorAssemblyInfo.cache
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.RazorAssemblyInfo.cs
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.AssemblyInfoInputs.cache
@@ -394,6 +392,10 @@ C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreap
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.dll
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.pdb
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.genruntimeconfig.cache
-C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\RegistroExitoso.cshtml.g.cs
-C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\RegistroExitosoEsc.cshtml.g.cs
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\CuestionarioExitoso.cshtml.g.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\ErrorTerminarCuestionario.cshtml.g.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.csproj.CoreCompileInputs.cache
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\M-chat.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Diagnostico.cshtml.g.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Centroedu\RegistroExitosoEsc.cshtml.g.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Ninio\RegistroExitoso.cshtml.g.cs

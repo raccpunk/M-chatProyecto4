@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace M_chat.Pages
 {
-    public class RegistroExitosoModel : PageModel
+    public class ErrorTerminarCuestionarioModel : PageModel
     {
         public void OnGet()
         {

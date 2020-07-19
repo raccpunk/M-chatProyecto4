@@ -28,11 +28,12 @@ namespace M_chat.Pages
         public IEnumerable<CentroEducativo> centroEducativos { get; set; }
 
       
-        public async Task OnPost()
+        public async Task<IActionResult> OnPost()
         {
             centroEducativos= await BD.CentroEducativo.ToListAsync();
             BD.Ninio.Add(ninio);
             BD.SaveChanges();
+            return RedirectToPage("RegistroExitoso",email);
         }
         public async Task<IActionResult> OnGetAsync(string email)
         {

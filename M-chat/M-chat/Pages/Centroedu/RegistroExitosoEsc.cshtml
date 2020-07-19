@@ -1,9 +1,10 @@
 ﻿@page
-@model M_chat.Pages.RegistroExitosoModel
+@model M_chat.Pages.RegistroExitosoEscModel
 @{
-    ViewData["Title"] = "RegistroExitoso";
+    ViewData["Title"] = "RegistroExitosoEsc";
 }
 
+<h1></h1>
 <h1></h1>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,29 +114,26 @@
     </style>
 </head>
 <body>
-    
-        <!-- Button HTML (to Trigger Modal) -->
-    
-    
 
+    <!-- Button HTML (to Trigger Modal) -->
     <!-- Modal HTML -->
- 
-        <div class="modal-dialog modal-confirm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="icon-box">
-                        <i class="material-icons">&#xE876;</i>
-                    </div>
-                    <h4 class="modal-title w-100">Niño Registrado!</h4>
+
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE876;</i>
                 </div>
-                <div class="modal-body">
-                    <p class="text-center">Tu Registro ha sido exitoso</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-success btn-block" data-dismiss="modal">Continuar</button>
-                </div>
+                <h4 class="modal-title w-100">Centro Educativo Registrado!</h4>
             </div>
+            <div class="modal-body">
+                <p class="text-center">Tu Registro ha sido exitoso</p>
+            </div>
+                <div class="modal-footer">
+                    <a  asp-page="../InicioUsuario" asp-route-email="@Model.email" class="btn btn-success btn-block" data-dismiss="modal">Continuar</a>
+                </div>
         </div>
-   
+    </div>
+
 </body>
 </html>

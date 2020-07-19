@@ -22,6 +22,8 @@ namespace M_chat.Pages
         }
         [BindProperty(SupportsGet =true)]
         public string email { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string Curp { get; set; }
         public IList<Models.Ninio> ninios { get; set; }
         public IList<Cuestionario> Quest { get; set; }
         public async Task<IActionResult> OnGet(string email)
@@ -42,10 +44,9 @@ namespace M_chat.Pages
                 this.email = email;
                 ninios = await (Bd.Ninio.Where(c => c.Email == email)).ToListAsync();
                 Quest = await (Bd.Cuestionario.Where(n => n.Email == email)).ToListAsync();
-                
-                
                 return Page();
             }
         }
+        
     }
 }

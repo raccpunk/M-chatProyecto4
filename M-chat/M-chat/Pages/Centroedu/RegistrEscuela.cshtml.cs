@@ -24,10 +24,22 @@ namespace M_chat.Pages
             _logger = logger;
             BD = appBD;
         }
-        public void OnPost()
+        public IActionResult OnPost()
         {
-            BD.CentroEducativo.Add(centroeducativo);
-            BD.SaveChanges();
+            
+            try
+            {
+                BD.CentroEducativo.Add(centroeducativo);
+                BD.SaveChanges();
+                return RedirectToPage("RegistroExitosoEsc",email);
+            }
+            catch (Exception)
+            {
+
+                return Page();
+            }
+            
+
         }
       
         public IActionResult OnGet(string email)
@@ -35,7 +47,7 @@ namespace M_chat.Pages
             if (HttpContext.Session.GetString("Nombre") == null)
             {
                 this.email = email;
-                return RedirectToPage("Index");
+                return RedirectToPage("../Index");
             }
             else
             {

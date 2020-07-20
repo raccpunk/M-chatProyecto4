@@ -399,3 +399,4 @@ C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreap
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Diagnostico.cshtml.g.cs
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Centroedu\RegistroExitosoEsc.cshtml.g.cs
 C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\Ninio\RegistroExitoso.cshtml.g.cs
+C:\Users\CASA\Documents\M-chat\M-chatProyecto4\M-chat\M-chat\obj\Debug\netcoreapp3.1\Razor\Pages\RegistroUsuarioExitoso.cshtml.g.cs

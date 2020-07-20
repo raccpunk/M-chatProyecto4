@@ -184,7 +184,7 @@ namespace M_chat.Pages
             {
                 ServicioDeCorreo.EnviarCorreo(
                         Asunto: "Deteccion del Autismo",
-                        Cuerpo: $"Su hijo {nombre} tiene propbabilidad de autismo",
+                        Cuerpo: $"Su hijo {nombre} tiene probabilidad de autismo",
                         Destinatarios: new List<string> { Email }
                         );
             }
@@ -192,7 +192,7 @@ namespace M_chat.Pages
             {
                 ServicioDeCorreo.EnviarCorreo(
                     Asunto: "Deteccion del Autismo",
-                    Cuerpo: $"Su hijo {nombre} no tiene propbabilidad de autismo",
+                    Cuerpo: $"Su hijo {nombre} no tiene probabilidad de autismo",
                     Destinatarios: new List<string> { Email }
                     );
             }

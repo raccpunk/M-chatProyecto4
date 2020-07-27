@@ -7,11 +7,22 @@ using M_chat.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using M_chat.Services;
+using Microsoft.EntityFrameworkCore;
+using System.Net.Mail;
+using Microsoft.AspNetCore.Hosting;
+using Org.BouncyCastle.Asn1.X509;
 
 namespace M_chat.Pages
 {
     public class CuestionarioModel : PageModel
     {
+        private readonly IWebHostEnvironment hostEnviroment;
+        public CuestionarioModel( IWebHostEnvironment _hostEnviroment, AppBDContext _context)
+        {
+            hostEnviroment = _hostEnviroment;
+            context = _context;
+        }
+        
         AppBDContext context;
         [BindProperty]
         public Respuestas Respuestas { get; set; }
@@ -26,11 +37,9 @@ namespace M_chat.Pages
         public int dos { get; set; }
         [BindProperty]
         public Diagnostico diagnostico { get; set; }
+        public Models.Ninio ninio { get; set; }
         public string Resultado { get; set; }
-        public CuestionarioModel(AppBDContext _context)
-        {
-            context = _context;
-        }
+        
         public IActionResult OnGet(string curp)
         {
             var tutorem = from e in context.Ninio select e;
@@ -46,22 +55,36 @@ namespace M_chat.Pages
             }
 
         }
-        public void OnPost()
+        public IActionResult OnPost()
         {
-            var tutorem = from e in context.Ninio select e;
-            cuestionario.Curpninio = Curp;
-            cuestionario.Email = Email;
-            cuestionario.FechaAplicacion = DateTime.Now;
-            Respuestas.Clave = cuestionario.Email + cuestionario.Curpninio + DateTime.Now;
-            cuestionario.RespuestasId = Respuestas.Clave;
-            Diagnosticar();
-            diagnostico.Resultado = Resultado;
-            diagnostico.ninio = Curp;
-            correo(context.Ninio.Where(n => n.Curp == Curp).First().Nombre);
-            context.Diagnostico.Add(diagnostico);
-            context.Respuestas.Add(Respuestas);
-            context.Cuestionario.Add(cuestionario);
-            context.SaveChanges();
+            try
+            {
+                ninio = context.Ninio.Where(n => n.Curp == Curp).First();
+                ninio.diagnotiscado = true;
+                cuestionario.Curpninio = Curp;
+                cuestionario.Email = Email;
+                cuestionario.FechaAplicacion = DateTime.Now;
+                Respuestas.Clave = cuestionario.Email + cuestionario.Curpninio + DateTime.Now;
+                cuestionario.RespuestasId = Respuestas.Clave;
+                Diagnosticar();
+                diagnostico.Criticas = dos / 2;
+                diagnostico.Normales = uno;
+                diagnostico.Resultado = Resultado;
+                diagnostico.ninio = Curp;
+                context.Diagnostico.Add(diagnostico);
+                context.Respuestas.Add(Respuestas);
+                context.Cuestionario.Add(cuestionario);
+                context.Attach(ninio).State = EntityState.Modified;
+                context.SaveChanges();
+                correo(context.Ninio.Where(n => n.Curp == Curp).First().Nombre,Respuestas);
+                return RedirectToPage("/CuestionarioExitoso",Email);
+            }
+            catch (Exception)
+            {
+                //throw;
+                return RedirectToPage("/ErrorTerminarCuestionario", Email);
+            }
+            
         }
         public void Diagnosticar() 
         {
@@ -177,15 +200,17 @@ namespace M_chat.Pages
                 Resultado = "Sin posibilidad de autismo";
             }
         }
-        public void correo(string nombre)
+        public void correo(string nombre,Respuestas respuestas)
         {
             var ServicioDeCorreo = new CorreoDelSistema();
+            var File = new Attachment(CrearPDF.CrearPdf(nombre,respuestas,hostEnviroment.WebRootPath,dos/2,uno), $"Resultados de {nombre}.pdf");
             if (diagnostico.Resultado == "Posible autismo")
             {
                 ServicioDeCorreo.EnviarCorreo(
                         Asunto: "Deteccion del Autismo",
                         Cuerpo: $"Su hijo {nombre} tiene probabilidad de autismo",
-                        Destinatarios: new List<string> { Email }
+                        Destinatarios: new List<string> { Email },
+                        File
                         );
             }
             else
@@ -193,7 +218,8 @@ namespace M_chat.Pages
                 ServicioDeCorreo.EnviarCorreo(
                     Asunto: "Deteccion del Autismo",
                     Cuerpo: $"Su hijo {nombre} no tiene probabilidad de autismo",
-                    Destinatarios: new List<string> { Email }
+                    Destinatarios: new List<string> { Email },
+                    File
                     );
             }
         }

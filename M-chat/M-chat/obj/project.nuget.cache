@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0LU/MiKFLth6+SpAIv+xCxWIK9rb6tE9AtFa9F8iYPm+q70oCfWth4AupBmFO2ks8rTHzkOBr6TSiWlooj3P7Q==",
+  "dgSpecHash": "2AjNnbKW9ChqDyUX+eCcOG3wSaJg+mXZgBbGXqQKzXKY3suMEXN5Ol2adgD8Yli1wX157VuVKwsbE2WB3KkvZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\CASA\\Documents\\M-chat\\M-chatProyecto4\\M-chat\\M-chat\\M-chat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CASA\\.nuget\\packages\\bcrypt.net-next\\4.0.0\\bcrypt.net-next.4.0.0.nupkg.sha512",
+    "C:\\Users\\CASA\\.nuget\\packages\\itextsharp\\5.5.13.1\\itextsharp.5.5.13.1.nupkg.sha512",
     "C:\\Users\\CASA\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\CASA\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\CASA\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
@@ -187,5 +188,16 @@
     "C:\\Users\\CASA\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\CASA\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"iTextSharp 5.5.13.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

@@ -27,7 +27,8 @@ namespace M_chat.Pages
             tutor.Contrasenia = BCrypt.Net.BCrypt.HashPassword(tutor.Contrasenia);
             BD.Tutor.Add(tutor);
             BD.SaveChanges();
-            return RedirectToPage("../Index");
+
+            return RedirectToPage("../RegistroUsuarioExitoso");
         }
     }
 }

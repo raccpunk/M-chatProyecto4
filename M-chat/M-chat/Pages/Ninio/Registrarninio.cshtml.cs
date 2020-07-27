@@ -30,6 +30,7 @@ namespace M_chat.Pages
       
         public async Task<IActionResult> OnPost()
         {
+            ninio.diagnotiscado = false;
             centroEducativos= await BD.CentroEducativo.ToListAsync();
             BD.Ninio.Add(ninio);
             BD.SaveChanges();
@@ -41,7 +42,7 @@ namespace M_chat.Pages
             if (HttpContext.Session.GetString("Nombre") == null)
             {
                 this.email = email;
-                return RedirectToPage("Index");
+                return RedirectToPage("Index");  
             }
             else
             {

@@ -41,9 +41,14 @@ namespace M_chat.Models
         [Required]
         [Display(Name = "Apellidos")]
         public string Apellidos { get; set; }
+        [Required]
+        [Display(Name = "Diagnosticado")]
+        public bool diagnotiscado { get; set; }
 
         //Relacion con respuestas many to many
+        [NotMapped]
         public ICollection<Cuestionario> cuestionario { get; set; }
+        [NotMapped]
         public ICollection<Diagnostico> diagnosticos { get; set; }
     }
 }

@@ -262,20 +262,11 @@
                             <a asp-page="./Ninio/Edit" asp-route-curp="@item.Curp" class="edit" title="editar" data-toggle="tooltip"><i class="material-icons">&#xE869;</i></a>
                             <a asp-page="./Ninio/Details" asp-route-curp="@item.Curp" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                             <a asp-page="./Ninio/Delete" asp-route-curp="@item.Curp" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            @if (Model.Quest != null)
+                            @if (item.diagnotiscado)
                             {
-                                @foreach (var cuestio in Model.Quest)
-                                {
-                                    @if (cuestio.Curpninio == item.Curp)
-                                    {
-                                        <i title="Encuesta contestada" class="material-icons">&#xE862;</i>
-                                        <button onclick="Oresultado"><i title="Descargar Resultado" class="material-icons">&#xE884;</i></button>
-                                    }
-                                    else
-                                    {
-                                        <a asp-page="./Cuestionario" asp-route-curp="@item.Curp" asp-route-email="@item.Email" title="Contestar Encuesta" data-toggle="tooltip"><i class="material-icons">&#xE85D;</i></a>
-                                    }
-                                }
+                                    <i title="Encuesta contestada" class="material-icons">&#xE862;</i>
+                                    <a asp-page-handler="Reenviar" asp-route-curp="@item.Curp" asp-route-email="@item.Email" asp-route-nombre="@item.Nombre"><i title="Reenviar correo" class="material-icons">email</i></a>
+
                             }
                             else
                             {

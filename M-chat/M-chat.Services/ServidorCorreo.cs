@@ -29,7 +29,7 @@ namespace M_chat.Services
             smtpClient.Port = port;
             smtpClient.EnableSsl = ssl;
         }
-        public void EnviarCorreo(string Asunto, string Cuerpo, List<string> Destinatarios)
+        public void EnviarCorreo(string Asunto, string Cuerpo, List<string> Destinatarios, Attachment file)
         {
             var MensajeDeCorreo = new MailMessage();
             try
@@ -42,6 +42,7 @@ namespace M_chat.Services
                 MensajeDeCorreo.Subject = Asunto;
                 MensajeDeCorreo.Body = Cuerpo;
                 MensajeDeCorreo.Priority = MailPriority.Normal;
+                MensajeDeCorreo.Attachments.Add(file);
                 smtpClient.Send(MensajeDeCorreo);
             }
             catch (Exception)

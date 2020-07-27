@@ -17,6 +17,12 @@ namespace M_chat.Models
         [Required]
         [Display(Name = "Resultado")]
         public string Resultado { get; set; }
-        
+
+        [Required]
+        [Display(Name = "NPreguntasCriticas")]
+        public int Criticas { get; set;}
+        [Required]
+        [Display(Name = "NPreguntasNormales")]
+        public int Normales { get; set; }
     }
 }

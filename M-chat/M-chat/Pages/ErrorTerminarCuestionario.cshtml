@@ -145,7 +145,7 @@
                 <div class="modal-body text-center">
                     <h4>Por Favor conteste todas las preguntas!</h4>
                     <p>Para obtener su resultado es necesario que conteste por completo este cuestionario</p>
-                    <button class="btn btn-primary" data-dismiss="modal">Continuar</button>
+                    <a asp-page="/InicioUsuario"  asp-route-email="@Model.email" class="btn btn-primary" data-dismiss="modal">Continuar</a>
                 </div>
             </div>
         </div>
